@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan 2</title>
+    
+</head>
+<body>
+
+    <button onclick="tampilNama('ferdi')">1</button>
+    <button onclick="tampilNama('icang')">2</button>
+    <button onclick="resetNama()">Reset</button>
+
+    <p id="hasil"></p>
+
+    <script src="index.js">
+        function tampilNama(nama) {
+            document.getElementById("hasil").innerHTML = nama;
+        }
+
+        function resetNama() {
+            document.getElementById("hasil").innerHTML = "";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+
+    <h2>Kalkulator Sederhana</h2>
+
+    <input type="number" id="angka1">
+    <br><br>
+    <input type="number" id="angka2">
+    <br><br>
+
+    <button onclick="tambah()">+</button>
+    <button onclick="kurang()">-</button>
+
+    <p>Hasil: <span id="hasil: "></span></p>
+
+    <script>
+        function tambah() {
+            var a = document.getElementById("angka1").value;
+            var b = document.getElementById("angka2").value;
+            document.getElementById("hasil: ").innerHTML = Number(a) + Number(b);
+        }
+
+        function kurang() {
+            var a = document.getElementById("angka1").value;
+            var b = document.getElementById("angka2").value;
+            document.getElementById("hasil: ").innerHTML = Number(a) - Number(b);
+        }
+    </script>
+
+</body>
+</html>
