@@ -1,36 +1,30 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kalkulator Sederhana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 4</title>
 </head>
 <body>
-
-    <h2>Kalkulator Sederhana</h2>
+    <h2>Penjumlahan Sederhana</h2>
 
     <input type="number" id="angka1">
     <br><br>
     <input type="number" id="angka2">
     <br><br>
 
-    <button onclick="tambah()">+</button>
-    <button onclick="kurang()">-</button>
-
-    <p>Hasil: <span id="hasil: "></span></p>
+    <button onclick="hitung()">+</button>
+    <p>Hasil : <span id="hasil"></span></p>
 
     <script>
-        function tambah() {
+        function hitung() {
             var a = document.getElementById("angka1").value;
             var b = document.getElementById("angka2").value;
-            document.getElementById("hasil: ").innerHTML = Number(a) + Number(b);
-        }
 
-        function kurang() {
-            var a = document.getElementById("angka1").value;
-            var b = document.getElementById("angka2").value;
-            document.getElementById("hasil: ").innerHTML = Number(a) - Number(b);
+            var hasil = Number(a) + Number(b);
+
+            document.getElementById("hasil").innerHTML = hasil;
         }
     </script>
-
 </body>
 </html>

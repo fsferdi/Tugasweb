@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 8</title>
+</head>
+<body>
+    <h2>Konversi Suhu</h2>
+    <p>
+        Celcius
+        <input type="number" id="celcius" oninput="convert()">
+    </p>
+    <p>
+        Fahrenheit : 
+        <span id="hasil"></span>
+    </p>
+
+    <script>
+        function convert() {
+            var c = document.getElementById("celcius").value;
+            if (c === "") {
+                document.getElementById("hasil").innerHTML = "";
+            } else {
+                var f = (Number(c) * 9 / 5) + 32;
+                document.getElementById("hasil").innerHTML = f;
+            }
+        }
+    </script>
+
+</body>
+</html>

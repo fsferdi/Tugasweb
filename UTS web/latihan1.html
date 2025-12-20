@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Latihan 2</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
 </head>
 <body>
-
     <button onclick="tampilNama('ferdi')">1</button>
     <button onclick="tampilNama('icang')">2</button>
     <button onclick="resetNama()">Reset</button>
-
+    
     <p id="hasil"></p>
 
-    <script src="index.js">
+    <script>
         function tampilNama(nama) {
             document.getElementById("hasil").innerHTML = nama;
         }
-
         function resetNama() {
             document.getElementById("hasil").innerHTML = "";
         }
     </script>
-
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 10</title>
+</head>
+<body>
+    <button onclick="toggleMenu()">Menu</button>
+    <div id="submenu" style="display:none;">
+        <p><button>Menu 1</button></p>
+        <p><button>Menu 2</button></p>
+        <p><button>Menu 3</button></p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("submenu");
+            if (menu.style.display === "none") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

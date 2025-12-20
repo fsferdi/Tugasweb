@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan 5</title>
+    <title>Latihan 6</title>
 </head>
 <body>
     <h2>Kalkulator Sederhana</h2>
@@ -15,6 +15,9 @@
 
     <button onclick="tambah()">+</button>
     <button onclick="kurang()">-</button>
+    <br><br>
+    <button onclick="kali()">x</button>
+    <button onclick="bagi()">:</button>
     <p>Hasil : <span id="hasil"></span></p>
 
     <script>
@@ -27,6 +30,21 @@
             var a = document.getElementById("angka1").value;
             var b = document.getElementById("angka2").value;
             document.getElementById("hasil").innerHTML = Number(a) - Number(b);
+        }
+        function kali() {
+            var a = document.getElementById("angka1").value;
+            var b = document.getElementById("angka2").value;
+            document.getElementById("hasil").innerHTML = Number(a) * Number(b);
+        }
+        function bagi() {
+            var a = document.getElementById("angka1").value;
+            var b = document.getElementById("angka2").value;
+
+            if (b == 0) {
+                document.getElementById("hasil").innerHTML = "Tidak bisa dibagi 0";
+            } else {
+                document.getElementById("hasil").innerHTML = Number(a) / Number(b);
+            }
         }
     </script>
 </body>
