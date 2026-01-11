@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UAS 3</title>
+</head>
+<body>
+  <h2>Parkiran Kendaraan</h2><br><hr>
+  <div class="box">
+    <h3>Kendaraan Masuk</h3>
+    <p>
+      Plat : <input type="text" id="plat">
+    </p>
+    <p>
+      Jenis : <select id="jenis">
+        <option value="Motor">Motor</option>
+        <option value="Mobil">Mobil</option>
+      </select>
+    </p>
+    <p>
+      Merk : <input type="text" id="merk">
+    </p>
+    <button onclick="kendaraanMasuk()">Tambah</button>
+  </div><br><hr>
+  
+  <div class="box">
+    <h3>Kendaraan Keluar</h3>
+    <p>
+      Plat : <input type="text" id="platKeluar">
+    </p>
+    <button onclick="kendaraanKeluar()">Keluar</button>
+  </div><br><hr>
+  
+  <div class="box">
+    <h3>Daftar Parkir</h3>
+    <ul id="daftar"></ul>
+  </div><br><hr>
+  
+  <script>
+  const parkir = {};
+  
+  function kendaraanMasuk() {
+    const plat = document.getElementById("plat").value;
+    const jenis = document.getElementById("jenis").value;
+    const merk = document.getElementById("merk").value;
+    if (!plat || !merk) {
+      alert("Data belum lengkap");
+      return;
+    }
+    parkir[plat] = { jenis, merk };
+    alert("Kendaraan berhasil masuk");
+    tampilParkir();
+  }
+  
+  function kendaraanKeluar() {
+    const plat = document.getElementById("platKeluar").value;
+    if (parkir[plat]) {
+      const jenis = parkir[plat].jenis;
+      let biaya = 0;
+      if (jenis === "Motor") biaya = 15000;
+      else if (jenis === "Mobil") biaya = 30000;
+      alert(
+      "Plat: " + plat +
+      "\nJenis: " + jenis +
+      "\nMerk: " + parkir[plat].merk +
+      "\nBiaya Parkir: Rp " +  biaya
+      );
+      delete parkir [plat];
+      tampilParkir();
+    }
+    else {
+      alert("Kendaraan tidak ditemukan");
+    }
+  }
+  function tampilParkir() {
+    const daftar = document.getElementById("daftar");
+    daftar.innerHTML = "";
+    for (let plat in parkir) {
+      const li = document.createElement("li");
+      li.textContent = plat;
+      daftar.appendChild(li);
+    }
+  }
+  </script>
+</body>
+</html>
