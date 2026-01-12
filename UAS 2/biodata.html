@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Program IPS Mahasiswa</title>
+<style>
+	body {
+		font-family: Arial;
+		background: #f4f4f4;
+	}
+	.box {
+		width: 450px;
+		margin: 40px auto;
+		background: #fff;
+		padding: 20px;
+		border-radius: 5px;
+	}
+	button {
+		width: 100%;
+		margin-top: 5px;
+		padding: 8px;
+	}
+	input {
+		width: 100%;
+		padding: 6px;
+		margin-top: 5px;
+	}
+	.section {
+		display: none;
+		margin-top: 15px;
+	}
+</style>
+</head>
+<body>
+
+<div class="box">
+	<h3>Menu Utama</h3>
+
+	<button onclick="show('biodata')">1. Biodata</button>
+	<button onclick="show('sks')">2. SKS</button>
+	<button onclick="show('nilai')">3. Input Nilai</button>
+	<button onclick="show('lihat')">4. Lihat Nilai</button>
+	<button onclick="show('ip')">5. Lihat IP</button>
+	<button onclick="keluar()">6. Keluar</button>
+
+	<!-- BIODATA -->
+	<div id="biodata" class="section">
+		<h4>Biodata</h4>
+		<input id="nama" placeholder="Nama">
+		<input id="nim" placeholder="NIM">
+		<input id="prodi" placeholder="Prodi">
+		<button onclick="simpanBiodata()">Simpan</button>
+		<p id="hasilBiodata"></p>
+	</div>
+
+	<!-- SKS -->
+	<div id="sks" class="section">
+		<h4>Input SKS</h4>
+		<input id="jumlahMK" type="number" placeholder="Jumlah Mata Kuliah">
+		<button onclick="buatInputSKS()">Lanjut</button>
+		<div id="inputSKS"></div>
+	</div>
+
+	<!-- NILAI -->
+	<div id="nilai" class="section">
+		<h4>Input Nilai</h4>
+		<div id="inputNilai"></div>
+	</div>
+
+	<!-- LIHAT NILAI -->
+	<div id="lihat" class="section">
+		<h4>Lihat Nilai</h4>
+		<div id="daftarNilai"></div>
+	</div>
+
+	<!-- IP -->
+	<div id="ip" class="section">
+		<h4>Hitung IP</h4>
+		<p id="hasilIP"></p>
+	</div>
+</div>
+
+<script>
+	// === DATA (sama seperti variabel Python) ===
+	let biodata = {}
+	let daftarSKS = []
+	let daftarNilai = []
+
+	function show(id) {
+		document.querySelectorAll('.section').forEach(s => s.style.display = 'none')
+		document.getElementById(id).style.display = 'block'
+	}
+
+	function keluar() {
+		alert("Program selesai")
+		location.reload()
+	}
+
+	// === BIODATA ===
+	function simpanBiodata() {
+		biodata.nama = nama.value
+		biodata.nim = nim.value
+		biodata.prodi = prodi.value
+
+		hasilBiodata.innerHTML =
+			`Nama : ${biodata.nama}<br>
+			 NIM : ${biodata.nim}<br>
+			 Prodi : ${biodata.prodi}`
+	}
+
+	// === SKS ===
+	function buatInputSKS() {
+		let n = jumlahMK.value
+		daftarSKS = []
+		inputSKS.innerHTML = ""
+
+		for (let i = 0; i < n; i++) {
+			inputSKS.innerHTML += `<input type="number" placeholder="SKS ${i+1}" oninput="daftarSKS[${i}] = this.value">`
+		}
+
+		inputSKS.innerHTML += `<button onclick="buatInputNilai(${n})">Simpan SKS</button>`
+	}
+
+	// === NILAI ===
+	function buatInputNilai(n) {
+		daftarNilai = []
+		inputNilai.innerHTML = ""
+
+		for (let i = 0; i < n; i++) {
+			inputNilai.innerHTML += `<input type="number" placeholder="Nilai ${i+1}" oninput="daftarNilai[${i}] = this.value">`
+		}
+	}
+
+	// === LIHAT NILAI ===
+	function angkaKeLabel(a) {
+		if (a >= 85) return "A"
+		if (a >= 80) return "A-"
+		if (a >= 75) return "B+"
+		if (a >= 70) return "B"
+		if (a >= 65) return "B-"
+		if (a >= 60) return "C+"
+		if (a >= 55) return "C"
+		if (a >= 45) return "D"
+		return "E"
+	}
+
+	function lihatNilai() {
+		daftarNilaiDiv.innerHTML = ""
+		daftarNilai.forEach((n, i) => {
+			daftarNilaiDiv.innerHTML += `MK ${i+1}: ${n} (${angkaKeLabel(n)})<br>`
+		})
+	}
+
+	// === IP ===
+	function labelKeBobot(l) {
+		return {A:4,"A-":3.75,"B+":3.5,B:3,"B-":2.75,"C+":2.5,C:2,D:1,E:0}[l]
+	}
+
+	function hitungIP() {
+		let totalN = 0
+		let totalS = 0
+
+		for (let i = 0; i < daftarSKS.length; i++) {
+			let bobot = labelKeBobot(angkaKeLabel(daftarNilai[i]))
+			totalN += daftarSKS[i] * bobot
+			totalS += parseInt(daftarSKS[i])
+		}
+
+		hasilIP.innerText = "IP Anda : " + (totalN / totalS).toFixed(2)
+	}
+</script>
+
+</body>
+</html>

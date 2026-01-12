@@ -14,6 +14,9 @@ def kendaraan_masuk():
 	plat = input("Plat : ")
 	jenis = input("Jenis : ")
 	merk = input("Merk : ")
+	if any(k[0] == plat for k in kendaraan):
+    		print("Plat sudah ada")
+    		return
 	kendaraan.append([plat, jenis, merk])
 	print(f"Berhasil menambahkan kendaraan")
 	

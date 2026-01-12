@@ -12,8 +12,11 @@ def input_pilihan():
 	
 def tambah_antrian():
 	nama = input("Nama : ")
+	if nama in antrian:
+	       print("Nama sudah ada")
+	       return
 	antrian.append(nama)
-	print(f"Antrian '{nama}' berhasil ditambahkan")
+	print(f"Nama antrian berhasil ditambahkan")
 	
 def panggil_antrian():
 	if len(antrian) == 0:
