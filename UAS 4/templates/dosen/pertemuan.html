@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pertemuan Dosen</title>
+</head>
+<body>
+
+<h2>Dosen</h2>
+
+<a href="/dosen/pertemuan/hapus">Hapus Semua Pertemuan</a>
+
+<h3>Tambah Pertemuan</h3>
+
+<form method="POST">
+    <input name="nama" placeholder="Nama Pertemuan" required>
+    <input type="date" name="tanggal" required>
+    <input type="time" name="masuk" required>
+    <input type="time" name="keluar" required>
+    <button>Buat</button>
+</form>
+
+<h3>Daftar Pertemuan</h3>
+
+{% for p in data %}
+<p>
+<b>{{ p.nama }}</b> |
+{{ p.tanggal }} |
+{{ p.masuk }} - {{ p.keluar }}
+<a href="/dosen/pertemuan/{{ p.id }}">Detail</a>
+</p>
+{% else %}
+<p>Belum ada pertemuan</p>
+{% endfor %}
+
+</body>
+</html>

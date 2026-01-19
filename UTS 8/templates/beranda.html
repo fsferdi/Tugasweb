@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="section">
+    <div class="container">
+        <div class="card profile-card">
+            <img src="{{ url_for('static', filename='images/profile.png') }}"
+                 alt="Foto Profil"
+                 class="avatar">
+
+            <h2>Ferdi Laisouw</h2>
+
+            <p class="role">Backend Developer | Python</p>
+
+            <p class="desc">
+                Mahasiswa Teknik Informatika fokus pada pengembangan
+                perangkat lunak dan penyelesaian masalah melalui kode.
+                Selalu antusias mempelajari teknologi terbaru dan
+                membangun solusi digital yang efisien.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    color: #333;
+}
+
+nav {
+    background: #34495e;
+    padding: 15px 25px;
+}
+
+nav a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card {
+    background: #f1f3f5;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+    margin-bottom: 20px;
+}
+
+.card.orange {
+    border-left-color: #e67e22;
+}
+
+.summary-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-card {
+    background: #f1f3f5;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+}
+
+.text-blue {
+    color: #2980b9;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #34495e;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: justify;
+}
+
+.total-cell {
+    text-align: right;
+    font-weight: bold;
+    color: #27ae60;
+}

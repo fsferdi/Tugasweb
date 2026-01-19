@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buat Akun</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="box">
+    <h2>Buat Akun Baru</h2>
+
+    <form method="POST">
+        <input name="username" placeholder="Username" required>
+        <input name="password" type="password" placeholder="Password" required>
+
+        <select name="role">
+            <option value="dosen">Dosen</option>
+            <option value="mahasiswa">Mahasiswa</option>
+        </select>
+
+        <button>Simpan</button>
+    </form>
+
+    <a href="/admin/dashboard" class="btn">Kembali</a>
+</div>
+
+</body>
+</html>

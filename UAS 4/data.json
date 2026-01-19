@@ -1,0 +1,33 @@
+{
+    "admin": {
+        "username": "Ferdi",
+        "password": "2005"
+    },
+    "dosen": [
+        {
+            "nama": "Dosen A",
+            "username": "Dante",
+            "password": "1945"
+        }
+    ],
+    "mahasiswa": [
+        {
+            "nama": "Mahasiswa A",
+            "username": "Raytan",
+            "password": "2026"
+        }
+    ],
+    "pertemuan": [
+        {
+            "id": "87629bc2-80e0-4711-bc64-4c7ea3758e76",
+            "nama": "Web",
+            "tanggal": "2026-01-19",
+            "masuk": "13:00",
+            "keluar": "15:00",
+            "dibuat": "2026-01-19T07:34:19.349639",
+            "presensi": [
+                "f30ff6a7-e19e-4510-a4f8-d618d1ae74a2"
+            ]
+        }
+    ]
+}

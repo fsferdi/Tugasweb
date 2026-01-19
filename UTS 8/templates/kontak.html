@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="card">
+    <h3>Kontak</h3>
+    <p>Email: fsferdi76@gmail.com</p>
+
+    <div class="contact-nav">
+        <a href="#" class="contact-item whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#" class="contact-item facebook"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" class="contact-item instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" class="contact-item github"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+</div>
+
+<div class="card">
+    <h3>Dokumen</h3>
+    <a href="{{ url_for('download_pdf') }}" class="btn green"><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
+    <a href="{{ url_for('download_docx') }}" class="btn blue"><i class="fas fa-file-word"></i> Download CV (DOCX)</a>
+</div>
+
+{% endblock %}

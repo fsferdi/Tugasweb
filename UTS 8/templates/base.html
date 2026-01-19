@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Portofolio</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Beranda</a></li>
+            <li><a href="/tentang">Tentang</a></li>
+            <li><a href="/pendidikan">Pendidikan</a></li>
+            <li><a href="/pengalaman">Pengalaman</a></li>
+            <li><a href="/kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2026 Portofolio</p>
+    </footer>
+
+</body>
+</html>

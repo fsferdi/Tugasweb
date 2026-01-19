@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pertemuan</title>
+</head>
+<body>
+
+<h2>Daftar Pertemuan</h2>
+
+{% for p in data %}
+<p>
+{{ p.nama }}
+<a href="/mahasiswa/pertemuan/{{ p.id }}">Detail</a>
+</p>
+{% endfor %}
+
+</body>
+</html>

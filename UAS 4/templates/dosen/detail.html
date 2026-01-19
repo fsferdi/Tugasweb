@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Pertemuan</title>
+
+    <!-- QR Scanner Library -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+
+<h2>Detail Pertemuan</h2>
+<p><b>Nama:</b> {{ p.nama }}</p>
+<p><b>Tanggal:</b> {{ p.tanggal }}</p>
+<p><b>Waktu:</b> {{ p.masuk }} - {{ p.selesai }}</p>
+
+<hr>
+
+<h3>Presensi (Scan QR Mahasiswa)</h3>
+
+<div id="reader" style="width:300px;"></div>
+<p id="status"></p>
+
+<hr>
+
+<h3>Daftar Mahasiswa Hadir</h3>
+<ul>
+    {% for m in p.presensi %}
+        <li>{{ m }}</li>
+    {% else %}
+        <li>Belum ada</li>
+    {% endfor %}
+</ul>
+
+<script>
+const status = document.getElementById("status");
+
+function onScanSuccess(decodedText) {
+    status.innerText = "QR terbaca, memproses...";
+
+    fetch("/dosen/scan/{{ p.id }}", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "token=" + encodeURIComponent(decodedText)
+    })
+    .then(res => res.text())
+    .then(msg => {
+        status.innerText = msg;
+        location.reload(); // refresh daftar hadir
+    })
+    .catch(err => {
+        status.innerText = "Gagal scan";
+    });
+}
+
+new Html5Qrcode("reader").start(
+    { facingMode: "environment" },
+    {
+        fps: 10,
+        qrbox: 250
+    },
+    onScanSuccess
+);
+</script>
+
+</body>
+</html>

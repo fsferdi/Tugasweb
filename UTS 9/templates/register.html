@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Home</title>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/" class="nav-btn">Masuk</a>
+    <a href="/register" class="nav-btn">Home</a>
+</div>
+
+<div class="container">
+
+    <div class="page-title">Home</div>
+
+    <div class="card">
+        <h2>Buat Akun</h2>
+
+        {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <select name="role" required>
+                <option value="">Pilih Peran</option>
+                <option value="Admin">Admin</option>
+                <option value="Dosen">Dosen</option>
+                <option value="Mahasiswa">Mahasiswa</option>
+            </select>
+            <button type="submit">Buat</button>
+        </form>
+    </div>
+
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Peran</th>
+            <th>Hapus Akun</th>
+        </tr>
+        {% for a in accounts %}
+        <tr>
+            <td>{{ a.username }}</td>
+            <td>{{ a.role }}</td>
+            <td class="dlt">
+                <a href="/delete/{{ a.username }}"
+                   class="btn-delete"
+                   onclick="return confirm('Hapus akun?')">
+                   Hapus
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+</body>
+</html>

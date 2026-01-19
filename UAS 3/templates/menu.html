@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Menu</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Kendaraan Masuk</a>
+        <a href="/keluar">Kendaraan Keluar</a>
+        <a href="/parkir">Daftar Parkir</a>
+        <a href="/analisis">Analisis Parkir</a>
+    </nav>
+    
+    <div class="container">
+        {% if page == "masuk" %}
+        <h2 style="text-align: center;">Kendaraan Masuk</h2>
+        
+        <div class="card">
+            <form method="post">
+                Plat
+                <input name="plat">
+                Jenis
+                <select name="jenis">
+                    <option>Motor</option>
+                    <option>Mobil</option>
+                </select>
+                Merk
+                <input name="merk">
+                <button>Simpan</button>
+            </form>
+            <p>{{ pesan }}</p>
+            
+        </div>
+        
+        {% elif page == "keluar" %}
+        <h2 style="text-align: center;">Kendaraan Keluar</h2>
+        
+        <div class="card orange">
+            <form method="post">
+                Plat
+                <input name="plat">
+                <button>Keluar</button>
+            </form>
+            
+            {% if hasil %}
+            <p>Jenis: <b>{{ hasil[0].jenis }}</b></p>
+            <p>Biaya Parkir: <b>{{ hasil[1] }}</b></p>
+            {% endif %}
+            
+        </div>
+        
+        {% elif page == "parkir" %}
+        <h2 style="text-align: center;">Daftar Parkir</h2>
+        
+        <div class="card">
+            <ul>
+                {% for p in data %}
+                <li>{{ p }}</li>
+                {% else %}
+                <li>Tidak ada kendaraan</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
+    </div>
+    
+</body>
+</html>

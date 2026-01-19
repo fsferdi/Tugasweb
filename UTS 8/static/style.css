@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    background: #2f2f2f;
+    padding: 14px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 18px;
+}
+
+nav ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile {
+    text-align: left;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4CAF50;
+    margin-bottom: 20px;
+}
+
+.role {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+h2, h3, h4 {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.skill-list li {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.timeline {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.timeline li {
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #4CAF50;
+}
+
+.experience {
+    padding: 15px;
+    border-left: 4px solid #2196F3;
+    background: #f8fbff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.experience small {
+    color: #666;
+}
+
+.contact-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    gap: 12px;
+}
+
+.contact-item {
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* WARNA SOSIAL */
+.whatsapp {
+    background: #25D366;
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.github {
+    background: #24292e;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.green {
+    background: #4CAF50;
+}
+
+.blue {
+    background: #2196F3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    .avatar {
+        width: 110px;
+        height: 110px;
+    }
+
+    .contact-nav {
+        justify-content: center;
+    }
+}

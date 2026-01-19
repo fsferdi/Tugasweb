@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/logout" class="nav-btn">Logout</a>
+</div>
+
+<div class="container">
+    <div class="page-title">Dashboard {{ role }}</div>
+
+    <div class="card">
+        <h2>Selamat Datang</h2>
+        <p>Halo, <b>{{ username }}</b></p>
+        <p>Anda login sebagai <b>{{ role }}</b></p>
+    </div>
+</div>
+
+</body>
+</html>
