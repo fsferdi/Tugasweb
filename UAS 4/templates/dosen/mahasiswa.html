@@ -2,21 +2,34 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Mahasiswa</title>
-    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-
-<nav class="nav">
-    <a href="/dosen/dashboard">Dashboard</a>
-    <a href="/dosen/pertemuan">Pertemuan</a>
-    <a href="/dosen/mahasiswa">Daftar Mahasiswa</a>
-    <a href="/logout">Logout</a>
-</nav>
-
-<div class="box">
+    <nav>
+        <a href="{{ url_for('dosen_dashboard') }}">Dashboard</a> |
+        <a href="{{ url_for('dosen_pertemuan') }}">Pertemuan</a> |
+        <a href="{{ url_for('dosen_mahasiswa') }}">Daftar Mahasiswa</a> |
+        <a href="{{ url_for('logout') }}">Logout</a>    
+        
+    </nav>
+    <hr>
+    
     <h2>Daftar Mahasiswa</h2>
-</div>
+    {% if mahasiswa %}
+    <ol>
+        {% for m in mahasiswa %}
+        <li>
+            <strong>{{ m.nama }}</strong><br>
+            <small>Nomor Induk : {{ m.induk }}</small><br>
+            
+        </li>
+        {% endfor %}
+        
+    </ol>
+    {% else %}
+    <p>Belum ada mahasiswa terdaftar.</p>
+    {% endif %}
 
 </body>
 </html>

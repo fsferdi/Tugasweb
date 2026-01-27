@@ -2,68 +2,60 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Pertemuan</title>
-
-    <!-- QR Scanner Library -->
     <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
-
-<h2>Detail Pertemuan</h2>
-<p><b>Nama:</b> {{ p.nama }}</p>
-<p><b>Tanggal:</b> {{ p.tanggal }}</p>
-<p><b>Waktu:</b> {{ p.masuk }} - {{ p.selesai }}</p>
-
-<hr>
-
-<h3>Presensi (Scan QR Mahasiswa)</h3>
-
-<div id="reader" style="width:300px;"></div>
-<p id="status"></p>
-
-<hr>
-
-<h3>Daftar Mahasiswa Hadir</h3>
-<ul>
-    {% for m in p.presensi %}
-        <li>{{ m }}</li>
-    {% else %}
-        <li>Belum ada</li>
-    {% endfor %}
-</ul>
-
-<script>
-const status = document.getElementById("status");
-
-function onScanSuccess(decodedText) {
-    status.innerText = "QR terbaca, memproses...";
-
-    fetch("/dosen/scan/{{ p.id }}", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
+    <h2>{{ p.nama }}</h2>
+    <p>Tanggal : {{ p.tanggal }}</p>
+    <p>Waktu Mulai : {{ p.masuk }}</p>
+    <p>Waktu Selesai : {{ p.keluar }}</p>
+    <hr>
+    
+    <h3>Presensi QR</h3>
+    <button onclick="startScan()">Scan QR</button>
+    <div id="reader" style="width:300px; display:none;"></div>
+    
+    <form id="scanForm" method="POST" action="/dosen/scan/{{ p.id }}">
+        <input type="hidden" name="token" id="token">
+        
+    </form>
+    <hr>
+    
+    <h3>Daftar Hadir Mahasiswa</h3>
+    <ul>
+        {% for m in hadir %}
+        <li>{{ m.nama }} — {{ m.induk }}</li>
+        {% else %}
+        <li>Belum ada mahasiswa hadir</li>
+        {% endfor %}
+        
+    </ul>
+    
+    <a href="{{ url_for('dosen_pertemuan') }}" class="btn">Kembali</a>
+    
+    <script>
+    let scanner;
+    
+    function startScan() {
+        document.getElementById("reader").style.display = "block";
+        scanner = new Html5Qrcode("reader");
+        
+        scanner.start(
+        { facingMode: "environment" },
+        { fps: 10, qrbox: 250 },
+        qrCodeMessage => {
+            document.getElementById("token").value = qrCodeMessage;
+            scanner.stop();
+            document.getElementById("scanForm").submit();
         },
-        body: "token=" + encodeURIComponent(decodedText)
-    })
-    .then(res => res.text())
-    .then(msg => {
-        status.innerText = msg;
-        location.reload(); // refresh daftar hadir
-    })
-    .catch(err => {
-        status.innerText = "Gagal scan";
-    });
-}
-
-new Html5Qrcode("reader").start(
-    { facingMode: "environment" },
-    {
-        fps: 10,
-        qrbox: 250
-    },
-    onScanSuccess
-);
-</script>
+        error => {
+            
+        }
+        );
+    }
+    </script>
 
 </body>
 </html>

@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Pertemuan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan Mahasiswa</title>
 </head>
 <body>
-
-<h2>Daftar Pertemuan</h2>
-
-{% for p in data %}
-<p>
-{{ p.nama }}
-<a href="/mahasiswa/pertemuan/{{ p.id }}">Detail</a>
-</p>
-{% endfor %}
+    <nav>
+        <a href="{{ url_for('mahasiswa_dashboard') }}">Dashboard</a> |
+        <a href="{{ url_for('mahasiswa_pertemuan') }}">Pertemuan</a> |
+        <a href="{{ url_for('logout') }}">Logout</a>
+        
+    </nav>
+    <hr>
+    
+    <h2>Daftar Pertemuan</h2>
+    {% for p in data %}
+    <p>
+        {{ p.nama }}
+        <a href="/mahasiswa/pertemuan/{{ p.id }}">Detail</a>
+        
+    </p>
+    {% else %}
+    <p>Belum ada pertemuan</p>
+    {% endfor %}
 
 </body>
 </html>

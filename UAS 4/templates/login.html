@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
 <body>
-
-<h2>Login</h2>
-
-<form method="POST">
-    <input type="text" name="user" placeholder="Username / Nama" required>
-    <input type="password" name="pw" placeholder="Password">
-    <button type="submit">Login</button>
-</form>
+    <h2>Login</h2>
+    <form method="POST">
+        <input type="text" name="user" placeholder="Username" required>
+        <input type="password" name="pw" placeholder="Password">
+        <button type="submit">Login</button>
+        
+    </form>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
 
 </body>
 </html>

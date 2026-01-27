@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Pertemuan</title>
 </head>
 <body>
-
-<h2>{{ p.nama }}</h2>
-<p>{{ p.tanggal }} | {{ p.masuk }} - {{ p.keluar }}</p>
-
-<h3>QR Absen</h3>
-<img src="/{{ qr }}" width="200">
-<p>(Refresh halaman = QR berubah)</p>
-
+    <h2>{{ p.nama }}</h2>
+    <p>Tanggal : {{ p.tanggal }}</p>
+    <p>Waktu mulai : {{ p.masuk }}</p>
+    <p>Waktu selesai : {{ p.keluar }}</p>
+    <hr>
+    
+    <h3>QR Absen</h3>
+    <button onclick="tampilQR()">Tampilkan QR</button>
+    <div id="qrBox" style="display:none; margin-top:15px;">
+        <img src="data:image/png;base64,{{ qr }}" width="200">
+        
+    </div>
+    <hr>
+    
+    <a href="{{ url_for('mahasiswa_pertemuan') }}">Kembali</a>
+    
+    <script>
+    function tampilQR() {
+        document.getElementById("qrBox").style.display = "block";
+    }
+    </script>
+    
 </body>
 </html>

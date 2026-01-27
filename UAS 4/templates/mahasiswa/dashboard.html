@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Mahasiswa</title>
 </head>
 <body>
-
-<h2>Dashboard Mahasiswa</h2>
-<p>Nama: {{ nama }}</p>
-
-<a href="/mahasiswa/pertemuan">Pertemuan</a> |
-<a href="/logout">Logout</a>
+    <nav>
+        <a href="{{ url_for('mahasiswa_dashboard') }}">Dashboard</a> |
+        <a href="{{ url_for('mahasiswa_pertemuan') }}">Pertemuan</a> |
+        <a href="{{ url_for('logout') }}">Logout</a>
+        
+    </nav>
+    <hr>
+    
+    <h2>Dashboard Mahasiswa</h2>
+    <p>Nama Mahasiswa : {{ nama }}</p>
+    <p>Nomor Induk : {{ induk }}</p>
 
 </body>
 </html>

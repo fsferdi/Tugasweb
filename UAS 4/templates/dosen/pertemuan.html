@@ -1,36 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Pertemuan Dosen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan</title>
 </head>
 <body>
-
-<h2>Dosen</h2>
-
-<a href="/dosen/pertemuan/hapus">Hapus Semua Pertemuan</a>
-
-<h3>Tambah Pertemuan</h3>
-
-<form method="POST">
-    <input name="nama" placeholder="Nama Pertemuan" required>
-    <input type="date" name="tanggal" required>
-    <input type="time" name="masuk" required>
-    <input type="time" name="keluar" required>
-    <button>Buat</button>
-</form>
-
-<h3>Daftar Pertemuan</h3>
-
-{% for p in data %}
-<p>
-<b>{{ p.nama }}</b> |
-{{ p.tanggal }} |
-{{ p.masuk }} - {{ p.keluar }}
-<a href="/dosen/pertemuan/{{ p.id }}">Detail</a>
-</p>
-{% else %}
-<p>Belum ada pertemuan</p>
-{% endfor %}
+    <nav>
+        <a href="{{ url_for('dosen_dashboard') }}">Dashboard</a> |
+        <a href="{{ url_for('dosen_pertemuan') }}">Pertemuan</a> |
+        <a href="{{ url_for('dosen_mahasiswa') }}">Daftar Mahasiswa</a> |
+        <a href="{{ url_for('logout') }}">Logout</a>
+        
+    </nav>
+    <hr>
+    
+    <h2>Pertemuan</h2>
+    <a href="{{ url_for('hapus_pertemuan') }}">Hapus Semua Pertemuan</a>
+    
+    <h3>Tambah Pertemuan</h3>
+    <form method="POST">
+        <p>Nama <input name="nama" required></p>
+        <p>Tanggal <input type="date" name="tanggal" required></p>
+        <p>Waktu Mulai <input type="time" name="masuk" required></p>
+        <p>Waktu Selesai <input type="time" name="keluar" required></p>
+        <button>Buat</button>
+        
+    </form>
+    
+    <h3>Daftar Pertemuan</h3>
+    {% for p in data %}
+    <p>
+        <b>{{ p.nama }}</b> |
+        {{ p.tanggal }} |
+        {{ p.masuk }} - {{ p.keluar }} |
+        <a href="/dosen/pertemuan/{{ p.id }}">Detail</a>
+        
+    </p>
+    {% else %}
+    <p>Belum ada pertemuan</p>
+    {% endfor %}
 
 </body>
 </html>
