@@ -1,0 +1,5242 @@
+const dataKeluarga = [
+  {
+    "ID": 1,
+    "Nama_Lengkap": "Kakek Wijaya",
+    "Peran": "Leluhur",
+    "ID_Ayah": null,
+    "ID_Ibu": null,
+    "ID_Pasangan": 2,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 2,
+    "Nama_Lengkap": "Nenek Aminah",
+    "Peran": "Leluhur",
+    "ID_Ayah": null,
+    "ID_Ibu": null,
+    "ID_Pasangan": 1,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 3,
+    "Nama_Lengkap": "Ayah Budi",
+    "Peran": "Orang Tua",
+    "ID_Ayah": 1,
+    "ID_Ibu": 2,
+    "ID_Pasangan": 4,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 4,
+    "Nama_Lengkap": "Ibu Siti",
+    "Peran": "Orang Tua",
+    "ID_Ayah": null,
+    "ID_Ibu": null,
+    "ID_Pasangan": 3,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 5,
+    "Nama_Lengkap": "Lina Keluarga 5",
+    "Peran": "Keturunan",
+    "ID_Ayah": 3,
+    "ID_Ibu": 4,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 6,
+    "Nama_Lengkap": "Rian Keluarga 6",
+    "Peran": "Keturunan",
+    "ID_Ayah": 3,
+    "ID_Ibu": 4,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 7,
+    "Nama_Lengkap": "Rina Keluarga 7",
+    "Peran": "Keturunan",
+    "ID_Ayah": 3,
+    "ID_Ibu": 4,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 8,
+    "Nama_Lengkap": "Ayu Keluarga 8",
+    "Peran": "Keturunan",
+    "ID_Ayah": 5,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 9,
+    "Nama_Lengkap": "Yoga Keluarga 9",
+    "Peran": "Keturunan",
+    "ID_Ayah": 5,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 10,
+    "Nama_Lengkap": "Budi Keluarga 10",
+    "Peran": "Keturunan",
+    "ID_Ayah": 5,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 11,
+    "Nama_Lengkap": "Maya Keluarga 11",
+    "Peran": "Keturunan",
+    "ID_Ayah": 7,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 12,
+    "Nama_Lengkap": "Rina Keluarga 12",
+    "Peran": "Keturunan",
+    "ID_Ayah": 7,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 13,
+    "Nama_Lengkap": "Yoga Keluarga 13",
+    "Peran": "Keturunan",
+    "ID_Ayah": 7,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 14,
+    "Nama_Lengkap": "Budi Keluarga 14",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 8,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 15,
+    "Nama_Lengkap": "Nina Keluarga 15",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 8,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 16,
+    "Nama_Lengkap": "Adi Keluarga 16",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 8,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 17,
+    "Nama_Lengkap": "Aisyah Keluarga 17",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 8,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 18,
+    "Nama_Lengkap": "Yoga Keluarga 18",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 8,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 19,
+    "Nama_Lengkap": "Ilham Keluarga 19",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 10,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 20,
+    "Nama_Lengkap": "Aisyah Keluarga 20",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 10,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 21,
+    "Nama_Lengkap": "Dimas Keluarga 21",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 10,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 22,
+    "Nama_Lengkap": "Ilham Keluarga 22",
+    "Peran": "Keturunan",
+    "ID_Ayah": 11,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 23,
+    "Nama_Lengkap": "Dewi Keluarga 23",
+    "Peran": "Keturunan",
+    "ID_Ayah": 11,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 24,
+    "Nama_Lengkap": "Rina Keluarga 24",
+    "Peran": "Keturunan",
+    "ID_Ayah": 11,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 25,
+    "Nama_Lengkap": "Ayu Keluarga 25",
+    "Peran": "Keturunan",
+    "ID_Ayah": 11,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 26,
+    "Nama_Lengkap": "Putri Keluarga 26",
+    "Peran": "Keturunan",
+    "ID_Ayah": 11,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 27,
+    "Nama_Lengkap": "Andi Keluarga 27",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 12,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 28,
+    "Nama_Lengkap": "Aisyah Keluarga 28",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 12,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 29,
+    "Nama_Lengkap": "Nina Keluarga 29",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 12,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 30,
+    "Nama_Lengkap": "Maya Keluarga 30",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 12,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 31,
+    "Nama_Lengkap": "Rian Keluarga 31",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 14,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 32,
+    "Nama_Lengkap": "Adi Keluarga 32",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 14,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 33,
+    "Nama_Lengkap": "Siti Keluarga 33",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 14,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 34,
+    "Nama_Lengkap": "Fitri Keluarga 34",
+    "Peran": "Keturunan",
+    "ID_Ayah": 15,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 35,
+    "Nama_Lengkap": "Siti Keluarga 35",
+    "Peran": "Keturunan",
+    "ID_Ayah": 15,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 36,
+    "Nama_Lengkap": "Lina Keluarga 36",
+    "Peran": "Keturunan",
+    "ID_Ayah": 15,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 37,
+    "Nama_Lengkap": "Dewi Keluarga 37",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 16,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 38,
+    "Nama_Lengkap": "Agus Keluarga 38",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 16,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 39,
+    "Nama_Lengkap": "Putri Keluarga 39",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 16,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 40,
+    "Nama_Lengkap": "Siti Keluarga 40",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 16,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 41,
+    "Nama_Lengkap": "Fajar Keluarga 41",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 20,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 42,
+    "Nama_Lengkap": "Ilham Keluarga 42",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 20,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 43,
+    "Nama_Lengkap": "Ilham Keluarga 43",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 20,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 44,
+    "Nama_Lengkap": "Dimas Keluarga 44",
+    "Peran": "Keturunan",
+    "ID_Ayah": 21,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 45,
+    "Nama_Lengkap": "Rian Keluarga 45",
+    "Peran": "Keturunan",
+    "ID_Ayah": 21,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 46,
+    "Nama_Lengkap": "Maya Keluarga 46",
+    "Peran": "Keturunan",
+    "ID_Ayah": 21,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 47,
+    "Nama_Lengkap": "Maya Keluarga 47",
+    "Peran": "Keturunan",
+    "ID_Ayah": 21,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 48,
+    "Nama_Lengkap": "Agus Keluarga 48",
+    "Peran": "Keturunan",
+    "ID_Ayah": 21,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 49,
+    "Nama_Lengkap": "Budi Keluarga 49",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 22,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 50,
+    "Nama_Lengkap": "Andi Keluarga 50",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 22,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 51,
+    "Nama_Lengkap": "Andi Keluarga 51",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 22,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 52,
+    "Nama_Lengkap": "Maya Keluarga 52",
+    "Peran": "Keturunan",
+    "ID_Ayah": 23,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 53,
+    "Nama_Lengkap": "Rian Keluarga 53",
+    "Peran": "Keturunan",
+    "ID_Ayah": 23,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 54,
+    "Nama_Lengkap": "Agus Keluarga 54",
+    "Peran": "Keturunan",
+    "ID_Ayah": 23,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 55,
+    "Nama_Lengkap": "Rian Keluarga 55",
+    "Peran": "Keturunan",
+    "ID_Ayah": 23,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 56,
+    "Nama_Lengkap": "Ilham Keluarga 56",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 24,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 57,
+    "Nama_Lengkap": "Rizal Keluarga 57",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 24,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 58,
+    "Nama_Lengkap": "Siti Keluarga 58",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 24,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 59,
+    "Nama_Lengkap": "Rizal Keluarga 59",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 24,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 60,
+    "Nama_Lengkap": "Siti Keluarga 60",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 24,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 61,
+    "Nama_Lengkap": "Andi Keluarga 61",
+    "Peran": "Keturunan",
+    "ID_Ayah": 27,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 62,
+    "Nama_Lengkap": "Yoga Keluarga 62",
+    "Peran": "Keturunan",
+    "ID_Ayah": 27,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 63,
+    "Nama_Lengkap": "Ayu Keluarga 63",
+    "Peran": "Keturunan",
+    "ID_Ayah": 27,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 64,
+    "Nama_Lengkap": "Fajar Keluarga 64",
+    "Peran": "Keturunan",
+    "ID_Ayah": 27,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 65,
+    "Nama_Lengkap": "Andi Keluarga 65",
+    "Peran": "Keturunan",
+    "ID_Ayah": 27,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 66,
+    "Nama_Lengkap": "Fitri Keluarga 66",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 28,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 67,
+    "Nama_Lengkap": "Aisyah Keluarga 67",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 28,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 68,
+    "Nama_Lengkap": "Rizal Keluarga 68",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 28,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 69,
+    "Nama_Lengkap": "Aisyah Keluarga 69",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 28,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 70,
+    "Nama_Lengkap": "Putri Keluarga 70",
+    "Peran": "Keturunan",
+    "ID_Ayah": 29,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 71,
+    "Nama_Lengkap": "Lina Keluarga 71",
+    "Peran": "Keturunan",
+    "ID_Ayah": 29,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 72,
+    "Nama_Lengkap": "Yoga Keluarga 72",
+    "Peran": "Keturunan",
+    "ID_Ayah": 29,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 73,
+    "Nama_Lengkap": "Ilham Keluarga 73",
+    "Peran": "Keturunan",
+    "ID_Ayah": 29,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 74,
+    "Nama_Lengkap": "Rizal Keluarga 74",
+    "Peran": "Keturunan",
+    "ID_Ayah": 29,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 75,
+    "Nama_Lengkap": "Nina Keluarga 75",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 30,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 76,
+    "Nama_Lengkap": "Lina Keluarga 76",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 30,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 77,
+    "Nama_Lengkap": "Ayu Keluarga 77",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 30,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 78,
+    "Nama_Lengkap": "Yoga Keluarga 78",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 30,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 79,
+    "Nama_Lengkap": "Budi Keluarga 79",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 30,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 80,
+    "Nama_Lengkap": "Putri Keluarga 80",
+    "Peran": "Keturunan",
+    "ID_Ayah": 31,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 81,
+    "Nama_Lengkap": "Rian Keluarga 81",
+    "Peran": "Keturunan",
+    "ID_Ayah": 31,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 82,
+    "Nama_Lengkap": "Siti Keluarga 82",
+    "Peran": "Keturunan",
+    "ID_Ayah": 31,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 83,
+    "Nama_Lengkap": "Fitri Keluarga 83",
+    "Peran": "Keturunan",
+    "ID_Ayah": 31,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 84,
+    "Nama_Lengkap": "Ayu Keluarga 84",
+    "Peran": "Keturunan",
+    "ID_Ayah": 31,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 85,
+    "Nama_Lengkap": "Fajar Keluarga 85",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 34,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 86,
+    "Nama_Lengkap": "Maya Keluarga 86",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 34,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 87,
+    "Nama_Lengkap": "Rina Keluarga 87",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 34,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 88,
+    "Nama_Lengkap": "Andi Keluarga 88",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 34,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 89,
+    "Nama_Lengkap": "Nina Keluarga 89",
+    "Peran": "Keturunan",
+    "ID_Ayah": 35,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 90,
+    "Nama_Lengkap": "Putri Keluarga 90",
+    "Peran": "Keturunan",
+    "ID_Ayah": 35,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 91,
+    "Nama_Lengkap": "Rian Keluarga 91",
+    "Peran": "Keturunan",
+    "ID_Ayah": 35,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 92,
+    "Nama_Lengkap": "Rian Keluarga 92",
+    "Peran": "Keturunan",
+    "ID_Ayah": 35,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 93,
+    "Nama_Lengkap": "Lina Keluarga 93",
+    "Peran": "Keturunan",
+    "ID_Ayah": 35,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 94,
+    "Nama_Lengkap": "Yoga Keluarga 94",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 36,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 95,
+    "Nama_Lengkap": "Aisyah Keluarga 95",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 36,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 96,
+    "Nama_Lengkap": "Adi Keluarga 96",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 36,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 97,
+    "Nama_Lengkap": "Maya Keluarga 97",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 38,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 98,
+    "Nama_Lengkap": "Lina Keluarga 98",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 38,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 99,
+    "Nama_Lengkap": "Yoga Keluarga 99",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 38,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 100,
+    "Nama_Lengkap": "Rizal Keluarga 100",
+    "Peran": "Keturunan",
+    "ID_Ayah": 41,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 101,
+    "Nama_Lengkap": "Ayu Keluarga 101",
+    "Peran": "Keturunan",
+    "ID_Ayah": 41,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 102,
+    "Nama_Lengkap": "Rina Keluarga 102",
+    "Peran": "Keturunan",
+    "ID_Ayah": 41,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 103,
+    "Nama_Lengkap": "Rina Keluarga 103",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 42,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 104,
+    "Nama_Lengkap": "Rizal Keluarga 104",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 42,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 105,
+    "Nama_Lengkap": "Budi Keluarga 105",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 42,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 106,
+    "Nama_Lengkap": "Ilham Keluarga 106",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 42,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 107,
+    "Nama_Lengkap": "Rizal Keluarga 107",
+    "Peran": "Keturunan",
+    "ID_Ayah": 43,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 108,
+    "Nama_Lengkap": "Fitri Keluarga 108",
+    "Peran": "Keturunan",
+    "ID_Ayah": 43,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 109,
+    "Nama_Lengkap": "Maya Keluarga 109",
+    "Peran": "Keturunan",
+    "ID_Ayah": 43,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 110,
+    "Nama_Lengkap": "Rian Keluarga 110",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 44,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 111,
+    "Nama_Lengkap": "Siti Keluarga 111",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 44,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 112,
+    "Nama_Lengkap": "Yoga Keluarga 112",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 44,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 113,
+    "Nama_Lengkap": "Adi Keluarga 113",
+    "Peran": "Keturunan",
+    "ID_Ayah": 47,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 114,
+    "Nama_Lengkap": "Lina Keluarga 114",
+    "Peran": "Keturunan",
+    "ID_Ayah": 47,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 115,
+    "Nama_Lengkap": "Fitri Keluarga 115",
+    "Peran": "Keturunan",
+    "ID_Ayah": 47,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 116,
+    "Nama_Lengkap": "Fitri Keluarga 116",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 50,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 117,
+    "Nama_Lengkap": "Adi Keluarga 117",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 50,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 118,
+    "Nama_Lengkap": "Yoga Keluarga 118",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 50,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 119,
+    "Nama_Lengkap": "Rizal Keluarga 119",
+    "Peran": "Keturunan",
+    "ID_Ayah": 51,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 120,
+    "Nama_Lengkap": "Lina Keluarga 120",
+    "Peran": "Keturunan",
+    "ID_Ayah": 51,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 121,
+    "Nama_Lengkap": "Rina Keluarga 121",
+    "Peran": "Keturunan",
+    "ID_Ayah": 51,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 122,
+    "Nama_Lengkap": "Ayu Keluarga 122",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 60,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 123,
+    "Nama_Lengkap": "Ayu Keluarga 123",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 60,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 124,
+    "Nama_Lengkap": "Rizal Keluarga 124",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 60,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 125,
+    "Nama_Lengkap": "Lina Keluarga 125",
+    "Peran": "Keturunan",
+    "ID_Ayah": 61,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 126,
+    "Nama_Lengkap": "Rian Keluarga 126",
+    "Peran": "Keturunan",
+    "ID_Ayah": 61,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 127,
+    "Nama_Lengkap": "Adi Keluarga 127",
+    "Peran": "Keturunan",
+    "ID_Ayah": 61,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 128,
+    "Nama_Lengkap": "Putri Keluarga 128",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 62,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 129,
+    "Nama_Lengkap": "Maya Keluarga 129",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 62,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 130,
+    "Nama_Lengkap": "Maya Keluarga 130",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 62,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 131,
+    "Nama_Lengkap": "Andi Keluarga 131",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 62,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 132,
+    "Nama_Lengkap": "Dewi Keluarga 132",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 62,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 133,
+    "Nama_Lengkap": "Siti Keluarga 133",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 64,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 134,
+    "Nama_Lengkap": "Aisyah Keluarga 134",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 64,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 135,
+    "Nama_Lengkap": "Agus Keluarga 135",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 64,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 136,
+    "Nama_Lengkap": "Ilham Keluarga 136",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 64,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 137,
+    "Nama_Lengkap": "Putri Keluarga 137",
+    "Peran": "Keturunan",
+    "ID_Ayah": 65,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 138,
+    "Nama_Lengkap": "Putri Keluarga 138",
+    "Peran": "Keturunan",
+    "ID_Ayah": 65,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 139,
+    "Nama_Lengkap": "Rina Keluarga 139",
+    "Peran": "Keturunan",
+    "ID_Ayah": 65,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 140,
+    "Nama_Lengkap": "Andi Keluarga 140",
+    "Peran": "Keturunan",
+    "ID_Ayah": 65,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 141,
+    "Nama_Lengkap": "Maya Keluarga 141",
+    "Peran": "Keturunan",
+    "ID_Ayah": 65,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 142,
+    "Nama_Lengkap": "Fajar Keluarga 142",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 68,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 143,
+    "Nama_Lengkap": "Budi Keluarga 143",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 68,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 144,
+    "Nama_Lengkap": "Aisyah Keluarga 144",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 68,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 145,
+    "Nama_Lengkap": "Lina Keluarga 145",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 68,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 146,
+    "Nama_Lengkap": "Dewi Keluarga 146",
+    "Peran": "Keturunan",
+    "ID_Ayah": 71,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 147,
+    "Nama_Lengkap": "Fajar Keluarga 147",
+    "Peran": "Keturunan",
+    "ID_Ayah": 71,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 148,
+    "Nama_Lengkap": "Lina Keluarga 148",
+    "Peran": "Keturunan",
+    "ID_Ayah": 71,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 149,
+    "Nama_Lengkap": "Dimas Keluarga 149",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 72,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 150,
+    "Nama_Lengkap": "Adi Keluarga 150",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 72,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 151,
+    "Nama_Lengkap": "Fajar Keluarga 151",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 72,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 152,
+    "Nama_Lengkap": "Ilham Keluarga 152",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 72,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 153,
+    "Nama_Lengkap": "Agus Keluarga 153",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 72,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 154,
+    "Nama_Lengkap": "Yoga Keluarga 154",
+    "Peran": "Keturunan",
+    "ID_Ayah": 73,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 155,
+    "Nama_Lengkap": "Dewi Keluarga 155",
+    "Peran": "Keturunan",
+    "ID_Ayah": 73,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 156,
+    "Nama_Lengkap": "Maya Keluarga 156",
+    "Peran": "Keturunan",
+    "ID_Ayah": 73,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 157,
+    "Nama_Lengkap": "Andi Keluarga 157",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 74,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 158,
+    "Nama_Lengkap": "Rizal Keluarga 158",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 74,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 159,
+    "Nama_Lengkap": "Rian Keluarga 159",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 74,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 160,
+    "Nama_Lengkap": "Dewi Keluarga 160",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 74,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 161,
+    "Nama_Lengkap": "Ilham Keluarga 161",
+    "Peran": "Keturunan",
+    "ID_Ayah": 75,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 162,
+    "Nama_Lengkap": "Ilham Keluarga 162",
+    "Peran": "Keturunan",
+    "ID_Ayah": 75,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 163,
+    "Nama_Lengkap": "Lina Keluarga 163",
+    "Peran": "Keturunan",
+    "ID_Ayah": 75,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 164,
+    "Nama_Lengkap": "Agus Keluarga 164",
+    "Peran": "Keturunan",
+    "ID_Ayah": 75,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 165,
+    "Nama_Lengkap": "Putri Keluarga 165",
+    "Peran": "Keturunan",
+    "ID_Ayah": 77,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 166,
+    "Nama_Lengkap": "Dewi Keluarga 166",
+    "Peran": "Keturunan",
+    "ID_Ayah": 77,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 167,
+    "Nama_Lengkap": "Agus Keluarga 167",
+    "Peran": "Keturunan",
+    "ID_Ayah": 77,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 168,
+    "Nama_Lengkap": "Rina Keluarga 168",
+    "Peran": "Keturunan",
+    "ID_Ayah": 77,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 169,
+    "Nama_Lengkap": "Andi Keluarga 169",
+    "Peran": "Keturunan",
+    "ID_Ayah": 77,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 170,
+    "Nama_Lengkap": "Dimas Keluarga 170",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 78,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 171,
+    "Nama_Lengkap": "Aisyah Keluarga 171",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 78,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 172,
+    "Nama_Lengkap": "Agus Keluarga 172",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 78,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 173,
+    "Nama_Lengkap": "Rian Keluarga 173",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 78,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 174,
+    "Nama_Lengkap": "Rian Keluarga 174",
+    "Peran": "Keturunan",
+    "ID_Ayah": 79,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 175,
+    "Nama_Lengkap": "Dimas Keluarga 175",
+    "Peran": "Keturunan",
+    "ID_Ayah": 79,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 176,
+    "Nama_Lengkap": "Andi Keluarga 176",
+    "Peran": "Keturunan",
+    "ID_Ayah": 79,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 177,
+    "Nama_Lengkap": "Agus Keluarga 177",
+    "Peran": "Keturunan",
+    "ID_Ayah": 79,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 178,
+    "Nama_Lengkap": "Fitri Keluarga 178",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 80,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 179,
+    "Nama_Lengkap": "Rina Keluarga 179",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 80,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 180,
+    "Nama_Lengkap": "Fajar Keluarga 180",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 80,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 181,
+    "Nama_Lengkap": "Rina Keluarga 181",
+    "Peran": "Keturunan",
+    "ID_Ayah": 81,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 182,
+    "Nama_Lengkap": "Nina Keluarga 182",
+    "Peran": "Keturunan",
+    "ID_Ayah": 81,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 183,
+    "Nama_Lengkap": "Rian Keluarga 183",
+    "Peran": "Keturunan",
+    "ID_Ayah": 81,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 184,
+    "Nama_Lengkap": "Adi Keluarga 184",
+    "Peran": "Keturunan",
+    "ID_Ayah": 81,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 185,
+    "Nama_Lengkap": "Fitri Keluarga 185",
+    "Peran": "Keturunan",
+    "ID_Ayah": 81,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 186,
+    "Nama_Lengkap": "Ilham Keluarga 186",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 82,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 187,
+    "Nama_Lengkap": "Aisyah Keluarga 187",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 82,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 188,
+    "Nama_Lengkap": "Fajar Keluarga 188",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 82,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 189,
+    "Nama_Lengkap": "Aisyah Keluarga 189",
+    "Peran": "Keturunan",
+    "ID_Ayah": 83,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 190,
+    "Nama_Lengkap": "Maya Keluarga 190",
+    "Peran": "Keturunan",
+    "ID_Ayah": 83,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 191,
+    "Nama_Lengkap": "Dewi Keluarga 191",
+    "Peran": "Keturunan",
+    "ID_Ayah": 83,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 192,
+    "Nama_Lengkap": "Dewi Keluarga 192",
+    "Peran": "Keturunan",
+    "ID_Ayah": 83,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 193,
+    "Nama_Lengkap": "Rina Keluarga 193",
+    "Peran": "Keturunan",
+    "ID_Ayah": 83,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 194,
+    "Nama_Lengkap": "Ilham Keluarga 194",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 84,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 195,
+    "Nama_Lengkap": "Agus Keluarga 195",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 84,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 196,
+    "Nama_Lengkap": "Siti Keluarga 196",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 84,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 197,
+    "Nama_Lengkap": "Nina Keluarga 197",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 86,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 198,
+    "Nama_Lengkap": "Dewi Keluarga 198",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 86,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 199,
+    "Nama_Lengkap": "Rizal Keluarga 199",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 86,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 200,
+    "Nama_Lengkap": "Andi Keluarga 200",
+    "Peran": "Keturunan",
+    "ID_Ayah": 87,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 201,
+    "Nama_Lengkap": "Dewi Keluarga 201",
+    "Peran": "Keturunan",
+    "ID_Ayah": 87,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 202,
+    "Nama_Lengkap": "Adi Keluarga 202",
+    "Peran": "Keturunan",
+    "ID_Ayah": 87,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 203,
+    "Nama_Lengkap": "Ayu Keluarga 203",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 88,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 204,
+    "Nama_Lengkap": "Dimas Keluarga 204",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 88,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 205,
+    "Nama_Lengkap": "Aisyah Keluarga 205",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 88,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 206,
+    "Nama_Lengkap": "Aisyah Keluarga 206",
+    "Peran": "Keturunan",
+    "ID_Ayah": 89,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 207,
+    "Nama_Lengkap": "Nina Keluarga 207",
+    "Peran": "Keturunan",
+    "ID_Ayah": 89,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 208,
+    "Nama_Lengkap": "Rian Keluarga 208",
+    "Peran": "Keturunan",
+    "ID_Ayah": 89,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 209,
+    "Nama_Lengkap": "Andi Keluarga 209",
+    "Peran": "Keturunan",
+    "ID_Ayah": 89,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 210,
+    "Nama_Lengkap": "Yoga Keluarga 210",
+    "Peran": "Keturunan",
+    "ID_Ayah": 89,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 211,
+    "Nama_Lengkap": "Adi Keluarga 211",
+    "Peran": "Keturunan",
+    "ID_Ayah": 91,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 212,
+    "Nama_Lengkap": "Rina Keluarga 212",
+    "Peran": "Keturunan",
+    "ID_Ayah": 91,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 213,
+    "Nama_Lengkap": "Dimas Keluarga 213",
+    "Peran": "Keturunan",
+    "ID_Ayah": 91,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 214,
+    "Nama_Lengkap": "Rina Keluarga 214",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 94,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 215,
+    "Nama_Lengkap": "Budi Keluarga 215",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 94,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 216,
+    "Nama_Lengkap": "Siti Keluarga 216",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 94,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 217,
+    "Nama_Lengkap": "Nina Keluarga 217",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 94,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 218,
+    "Nama_Lengkap": "Ilham Keluarga 218",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 94,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 219,
+    "Nama_Lengkap": "Rian Keluarga 219",
+    "Peran": "Keturunan",
+    "ID_Ayah": 95,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 220,
+    "Nama_Lengkap": "Budi Keluarga 220",
+    "Peran": "Keturunan",
+    "ID_Ayah": 95,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 221,
+    "Nama_Lengkap": "Aisyah Keluarga 221",
+    "Peran": "Keturunan",
+    "ID_Ayah": 95,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 222,
+    "Nama_Lengkap": "Fajar Keluarga 222",
+    "Peran": "Keturunan",
+    "ID_Ayah": 95,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 223,
+    "Nama_Lengkap": "Agus Keluarga 223",
+    "Peran": "Keturunan",
+    "ID_Ayah": 95,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 224,
+    "Nama_Lengkap": "Ilham Keluarga 224",
+    "Peran": "Keturunan",
+    "ID_Ayah": 97,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 225,
+    "Nama_Lengkap": "Putri Keluarga 225",
+    "Peran": "Keturunan",
+    "ID_Ayah": 97,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 226,
+    "Nama_Lengkap": "Rian Keluarga 226",
+    "Peran": "Keturunan",
+    "ID_Ayah": 97,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 227,
+    "Nama_Lengkap": "Fitri Keluarga 227",
+    "Peran": "Keturunan",
+    "ID_Ayah": 97,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 228,
+    "Nama_Lengkap": "Adi Keluarga 228",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 98,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 229,
+    "Nama_Lengkap": "Dewi Keluarga 229",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 98,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 230,
+    "Nama_Lengkap": "Adi Keluarga 230",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 98,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 231,
+    "Nama_Lengkap": "Lina Keluarga 231",
+    "Peran": "Keturunan",
+    "ID_Ayah": 99,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 232,
+    "Nama_Lengkap": "Ilham Keluarga 232",
+    "Peran": "Keturunan",
+    "ID_Ayah": 99,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 233,
+    "Nama_Lengkap": "Rina Keluarga 233",
+    "Peran": "Keturunan",
+    "ID_Ayah": 99,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 234,
+    "Nama_Lengkap": "Rizal Keluarga 234",
+    "Peran": "Keturunan",
+    "ID_Ayah": 99,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 235,
+    "Nama_Lengkap": "Adi Keluarga 235",
+    "Peran": "Keturunan",
+    "ID_Ayah": 99,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 236,
+    "Nama_Lengkap": "Rizal Keluarga 236",
+    "Peran": "Keturunan",
+    "ID_Ayah": 101,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 237,
+    "Nama_Lengkap": "Rina Keluarga 237",
+    "Peran": "Keturunan",
+    "ID_Ayah": 101,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 238,
+    "Nama_Lengkap": "Rizal Keluarga 238",
+    "Peran": "Keturunan",
+    "ID_Ayah": 101,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 239,
+    "Nama_Lengkap": "Rina Keluarga 239",
+    "Peran": "Keturunan",
+    "ID_Ayah": 101,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 240,
+    "Nama_Lengkap": "Siti Keluarga 240",
+    "Peran": "Keturunan",
+    "ID_Ayah": 101,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 241,
+    "Nama_Lengkap": "Ilham Keluarga 241",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 102,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 242,
+    "Nama_Lengkap": "Nina Keluarga 242",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 102,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 243,
+    "Nama_Lengkap": "Putri Keluarga 243",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 102,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 244,
+    "Nama_Lengkap": "Aisyah Keluarga 244",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 102,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 245,
+    "Nama_Lengkap": "Dewi Keluarga 245",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 106,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 246,
+    "Nama_Lengkap": "Fajar Keluarga 246",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 106,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 247,
+    "Nama_Lengkap": "Adi Keluarga 247",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 106,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 248,
+    "Nama_Lengkap": "Andi Keluarga 248",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 106,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 249,
+    "Nama_Lengkap": "Andi Keluarga 249",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 108,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 250,
+    "Nama_Lengkap": "Lina Keluarga 250",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 108,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 251,
+    "Nama_Lengkap": "Nina Keluarga 251",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 108,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 252,
+    "Nama_Lengkap": "Ilham Keluarga 252",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 108,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 253,
+    "Nama_Lengkap": "Agus Keluarga 253",
+    "Peran": "Keturunan",
+    "ID_Ayah": 109,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 254,
+    "Nama_Lengkap": "Adi Keluarga 254",
+    "Peran": "Keturunan",
+    "ID_Ayah": 109,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 255,
+    "Nama_Lengkap": "Dewi Keluarga 255",
+    "Peran": "Keturunan",
+    "ID_Ayah": 109,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 256,
+    "Nama_Lengkap": "Aisyah Keluarga 256",
+    "Peran": "Keturunan",
+    "ID_Ayah": 113,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 257,
+    "Nama_Lengkap": "Fitri Keluarga 257",
+    "Peran": "Keturunan",
+    "ID_Ayah": 113,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 258,
+    "Nama_Lengkap": "Yoga Keluarga 258",
+    "Peran": "Keturunan",
+    "ID_Ayah": 113,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 259,
+    "Nama_Lengkap": "Adi Keluarga 259",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 114,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 260,
+    "Nama_Lengkap": "Rina Keluarga 260",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 114,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 261,
+    "Nama_Lengkap": "Fitri Keluarga 261",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 114,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 262,
+    "Nama_Lengkap": "Maya Keluarga 262",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 114,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 263,
+    "Nama_Lengkap": "Yoga Keluarga 263",
+    "Peran": "Keturunan",
+    "ID_Ayah": 115,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 264,
+    "Nama_Lengkap": "Fitri Keluarga 264",
+    "Peran": "Keturunan",
+    "ID_Ayah": 115,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 265,
+    "Nama_Lengkap": "Andi Keluarga 265",
+    "Peran": "Keturunan",
+    "ID_Ayah": 115,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 266,
+    "Nama_Lengkap": "Aisyah Keluarga 266",
+    "Peran": "Keturunan",
+    "ID_Ayah": 115,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 267,
+    "Nama_Lengkap": "Rian Keluarga 267",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 116,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 268,
+    "Nama_Lengkap": "Maya Keluarga 268",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 116,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 269,
+    "Nama_Lengkap": "Aisyah Keluarga 269",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 116,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 270,
+    "Nama_Lengkap": "Ayu Keluarga 270",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 116,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 271,
+    "Nama_Lengkap": "Budi Keluarga 271",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 116,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 272,
+    "Nama_Lengkap": "Rizal Keluarga 272",
+    "Peran": "Keturunan",
+    "ID_Ayah": 117,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 273,
+    "Nama_Lengkap": "Dewi Keluarga 273",
+    "Peran": "Keturunan",
+    "ID_Ayah": 117,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 274,
+    "Nama_Lengkap": "Ayu Keluarga 274",
+    "Peran": "Keturunan",
+    "ID_Ayah": 117,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 275,
+    "Nama_Lengkap": "Rina Keluarga 275",
+    "Peran": "Keturunan",
+    "ID_Ayah": 117,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 276,
+    "Nama_Lengkap": "Aisyah Keluarga 276",
+    "Peran": "Keturunan",
+    "ID_Ayah": 117,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 277,
+    "Nama_Lengkap": "Rizal Keluarga 277",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 118,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 278,
+    "Nama_Lengkap": "Fitri Keluarga 278",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 118,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 279,
+    "Nama_Lengkap": "Siti Keluarga 279",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 118,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 280,
+    "Nama_Lengkap": "Siti Keluarga 280",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 118,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 281,
+    "Nama_Lengkap": "Andi Keluarga 281",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 118,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 282,
+    "Nama_Lengkap": "Adi Keluarga 282",
+    "Peran": "Keturunan",
+    "ID_Ayah": 119,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 283,
+    "Nama_Lengkap": "Adi Keluarga 283",
+    "Peran": "Keturunan",
+    "ID_Ayah": 119,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 284,
+    "Nama_Lengkap": "Aisyah Keluarga 284",
+    "Peran": "Keturunan",
+    "ID_Ayah": 119,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 285,
+    "Nama_Lengkap": "Adi Keluarga 285",
+    "Peran": "Keturunan",
+    "ID_Ayah": 121,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 286,
+    "Nama_Lengkap": "Ayu Keluarga 286",
+    "Peran": "Keturunan",
+    "ID_Ayah": 121,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 287,
+    "Nama_Lengkap": "Siti Keluarga 287",
+    "Peran": "Keturunan",
+    "ID_Ayah": 121,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 288,
+    "Nama_Lengkap": "Fitri Keluarga 288",
+    "Peran": "Keturunan",
+    "ID_Ayah": 121,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 289,
+    "Nama_Lengkap": "Adi Keluarga 289",
+    "Peran": "Keturunan",
+    "ID_Ayah": 121,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 290,
+    "Nama_Lengkap": "Fajar Keluarga 290",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 122,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 291,
+    "Nama_Lengkap": "Aisyah Keluarga 291",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 122,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 292,
+    "Nama_Lengkap": "Budi Keluarga 292",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 122,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 293,
+    "Nama_Lengkap": "Siti Keluarga 293",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 122,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 294,
+    "Nama_Lengkap": "Adi Keluarga 294",
+    "Peran": "Keturunan",
+    "ID_Ayah": 123,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 295,
+    "Nama_Lengkap": "Yoga Keluarga 295",
+    "Peran": "Keturunan",
+    "ID_Ayah": 123,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 296,
+    "Nama_Lengkap": "Ilham Keluarga 296",
+    "Peran": "Keturunan",
+    "ID_Ayah": 123,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 297,
+    "Nama_Lengkap": "Putri Keluarga 297",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 124,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 298,
+    "Nama_Lengkap": "Rizal Keluarga 298",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 124,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 299,
+    "Nama_Lengkap": "Aisyah Keluarga 299",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 124,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 300,
+    "Nama_Lengkap": "Fitri Keluarga 300",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 124,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 301,
+    "Nama_Lengkap": "Fajar Keluarga 301",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 124,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 302,
+    "Nama_Lengkap": "Maya Keluarga 302",
+    "Peran": "Keturunan",
+    "ID_Ayah": 127,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 303,
+    "Nama_Lengkap": "Fajar Keluarga 303",
+    "Peran": "Keturunan",
+    "ID_Ayah": 127,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 304,
+    "Nama_Lengkap": "Dewi Keluarga 304",
+    "Peran": "Keturunan",
+    "ID_Ayah": 127,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 305,
+    "Nama_Lengkap": "Ayu Keluarga 305",
+    "Peran": "Keturunan",
+    "ID_Ayah": 127,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 306,
+    "Nama_Lengkap": "Aisyah Keluarga 306",
+    "Peran": "Keturunan",
+    "ID_Ayah": 127,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 307,
+    "Nama_Lengkap": "Siti Keluarga 307",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 128,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 308,
+    "Nama_Lengkap": "Lina Keluarga 308",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 128,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 309,
+    "Nama_Lengkap": "Dewi Keluarga 309",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 128,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 310,
+    "Nama_Lengkap": "Agus Keluarga 310",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 128,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 311,
+    "Nama_Lengkap": "Rina Keluarga 311",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 128,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 312,
+    "Nama_Lengkap": "Dewi Keluarga 312",
+    "Peran": "Keturunan",
+    "ID_Ayah": 129,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 313,
+    "Nama_Lengkap": "Putri Keluarga 313",
+    "Peran": "Keturunan",
+    "ID_Ayah": 129,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 314,
+    "Nama_Lengkap": "Yoga Keluarga 314",
+    "Peran": "Keturunan",
+    "ID_Ayah": 129,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 315,
+    "Nama_Lengkap": "Ilham Keluarga 315",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 130,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 316,
+    "Nama_Lengkap": "Adi Keluarga 316",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 130,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 317,
+    "Nama_Lengkap": "Ilham Keluarga 317",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 130,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 318,
+    "Nama_Lengkap": "Lina Keluarga 318",
+    "Peran": "Keturunan",
+    "ID_Ayah": 131,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 319,
+    "Nama_Lengkap": "Siti Keluarga 319",
+    "Peran": "Keturunan",
+    "ID_Ayah": 131,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 320,
+    "Nama_Lengkap": "Adi Keluarga 320",
+    "Peran": "Keturunan",
+    "ID_Ayah": 131,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 321,
+    "Nama_Lengkap": "Rizal Keluarga 321",
+    "Peran": "Keturunan",
+    "ID_Ayah": 131,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 322,
+    "Nama_Lengkap": "Budi Keluarga 322",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 134,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 323,
+    "Nama_Lengkap": "Adi Keluarga 323",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 134,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 324,
+    "Nama_Lengkap": "Yoga Keluarga 324",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 134,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 325,
+    "Nama_Lengkap": "Dewi Keluarga 325",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 134,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 326,
+    "Nama_Lengkap": "Dimas Keluarga 326",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 136,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 327,
+    "Nama_Lengkap": "Ayu Keluarga 327",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 136,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 328,
+    "Nama_Lengkap": "Andi Keluarga 328",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 136,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 329,
+    "Nama_Lengkap": "Ilham Keluarga 329",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 136,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 330,
+    "Nama_Lengkap": "Putri Keluarga 330",
+    "Peran": "Keturunan",
+    "ID_Ayah": 137,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 331,
+    "Nama_Lengkap": "Nina Keluarga 331",
+    "Peran": "Keturunan",
+    "ID_Ayah": 137,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 332,
+    "Nama_Lengkap": "Ayu Keluarga 332",
+    "Peran": "Keturunan",
+    "ID_Ayah": 137,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 333,
+    "Nama_Lengkap": "Rian Keluarga 333",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 142,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 334,
+    "Nama_Lengkap": "Adi Keluarga 334",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 142,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 335,
+    "Nama_Lengkap": "Yoga Keluarga 335",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 142,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 336,
+    "Nama_Lengkap": "Maya Keluarga 336",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 142,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 337,
+    "Nama_Lengkap": "Putri Keluarga 337",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 144,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 338,
+    "Nama_Lengkap": "Agus Keluarga 338",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 144,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 339,
+    "Nama_Lengkap": "Ilham Keluarga 339",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 144,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 340,
+    "Nama_Lengkap": "Maya Keluarga 340",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 144,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 341,
+    "Nama_Lengkap": "Rina Keluarga 341",
+    "Peran": "Keturunan",
+    "ID_Ayah": 145,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 342,
+    "Nama_Lengkap": "Nina Keluarga 342",
+    "Peran": "Keturunan",
+    "ID_Ayah": 145,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 343,
+    "Nama_Lengkap": "Fitri Keluarga 343",
+    "Peran": "Keturunan",
+    "ID_Ayah": 145,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 344,
+    "Nama_Lengkap": "Rina Keluarga 344",
+    "Peran": "Keturunan",
+    "ID_Ayah": 145,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 345,
+    "Nama_Lengkap": "Dimas Keluarga 345",
+    "Peran": "Keturunan",
+    "ID_Ayah": 145,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 346,
+    "Nama_Lengkap": "Fitri Keluarga 346",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 146,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 347,
+    "Nama_Lengkap": "Aisyah Keluarga 347",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 146,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 348,
+    "Nama_Lengkap": "Fitri Keluarga 348",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 146,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 349,
+    "Nama_Lengkap": "Rina Keluarga 349",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 148,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 350,
+    "Nama_Lengkap": "Fajar Keluarga 350",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 148,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 351,
+    "Nama_Lengkap": "Dimas Keluarga 351",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 148,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 352,
+    "Nama_Lengkap": "Adi Keluarga 352",
+    "Peran": "Keturunan",
+    "ID_Ayah": 149,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 353,
+    "Nama_Lengkap": "Maya Keluarga 353",
+    "Peran": "Keturunan",
+    "ID_Ayah": 149,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 354,
+    "Nama_Lengkap": "Maya Keluarga 354",
+    "Peran": "Keturunan",
+    "ID_Ayah": 149,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 355,
+    "Nama_Lengkap": "Fajar Keluarga 355",
+    "Peran": "Keturunan",
+    "ID_Ayah": 149,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 356,
+    "Nama_Lengkap": "Rian Keluarga 356",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 150,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 357,
+    "Nama_Lengkap": "Rina Keluarga 357",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 150,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 358,
+    "Nama_Lengkap": "Yoga Keluarga 358",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 150,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 359,
+    "Nama_Lengkap": "Adi Keluarga 359",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 150,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 360,
+    "Nama_Lengkap": "Maya Keluarga 360",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 150,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 361,
+    "Nama_Lengkap": "Ayu Keluarga 361",
+    "Peran": "Keturunan",
+    "ID_Ayah": 151,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 362,
+    "Nama_Lengkap": "Nina Keluarga 362",
+    "Peran": "Keturunan",
+    "ID_Ayah": 151,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 363,
+    "Nama_Lengkap": "Budi Keluarga 363",
+    "Peran": "Keturunan",
+    "ID_Ayah": 151,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 364,
+    "Nama_Lengkap": "Agus Keluarga 364",
+    "Peran": "Keturunan",
+    "ID_Ayah": 151,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 365,
+    "Nama_Lengkap": "Rian Keluarga 365",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 152,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 366,
+    "Nama_Lengkap": "Nina Keluarga 366",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 152,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 367,
+    "Nama_Lengkap": "Dimas Keluarga 367",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 152,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 368,
+    "Nama_Lengkap": "Ayu Keluarga 368",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 152,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 369,
+    "Nama_Lengkap": "Dimas Keluarga 369",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 152,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 370,
+    "Nama_Lengkap": "Siti Keluarga 370",
+    "Peran": "Keturunan",
+    "ID_Ayah": 153,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 371,
+    "Nama_Lengkap": "Ilham Keluarga 371",
+    "Peran": "Keturunan",
+    "ID_Ayah": 153,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 372,
+    "Nama_Lengkap": "Nina Keluarga 372",
+    "Peran": "Keturunan",
+    "ID_Ayah": 153,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 373,
+    "Nama_Lengkap": "Nina Keluarga 373",
+    "Peran": "Keturunan",
+    "ID_Ayah": 153,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 374,
+    "Nama_Lengkap": "Ilham Keluarga 374",
+    "Peran": "Keturunan",
+    "ID_Ayah": 155,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 375,
+    "Nama_Lengkap": "Budi Keluarga 375",
+    "Peran": "Keturunan",
+    "ID_Ayah": 155,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 376,
+    "Nama_Lengkap": "Yoga Keluarga 376",
+    "Peran": "Keturunan",
+    "ID_Ayah": 155,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 377,
+    "Nama_Lengkap": "Ayu Keluarga 377",
+    "Peran": "Keturunan",
+    "ID_Ayah": 155,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 378,
+    "Nama_Lengkap": "Rina Keluarga 378",
+    "Peran": "Keturunan",
+    "ID_Ayah": 157,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 379,
+    "Nama_Lengkap": "Siti Keluarga 379",
+    "Peran": "Keturunan",
+    "ID_Ayah": 157,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 380,
+    "Nama_Lengkap": "Maya Keluarga 380",
+    "Peran": "Keturunan",
+    "ID_Ayah": 157,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 381,
+    "Nama_Lengkap": "Ayu Keluarga 381",
+    "Peran": "Keturunan",
+    "ID_Ayah": 157,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 382,
+    "Nama_Lengkap": "Budi Keluarga 382",
+    "Peran": "Keturunan",
+    "ID_Ayah": 157,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 383,
+    "Nama_Lengkap": "Dimas Keluarga 383",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 158,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 384,
+    "Nama_Lengkap": "Adi Keluarga 384",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 158,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 385,
+    "Nama_Lengkap": "Dewi Keluarga 385",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 158,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 386,
+    "Nama_Lengkap": "Lina Keluarga 386",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 158,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 387,
+    "Nama_Lengkap": "Adi Keluarga 387",
+    "Peran": "Keturunan",
+    "ID_Ayah": 159,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 388,
+    "Nama_Lengkap": "Nina Keluarga 388",
+    "Peran": "Keturunan",
+    "ID_Ayah": 159,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 389,
+    "Nama_Lengkap": "Dimas Keluarga 389",
+    "Peran": "Keturunan",
+    "ID_Ayah": 159,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 390,
+    "Nama_Lengkap": "Dewi Keluarga 390",
+    "Peran": "Keturunan",
+    "ID_Ayah": 159,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 391,
+    "Nama_Lengkap": "Ayu Keluarga 391",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 160,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 392,
+    "Nama_Lengkap": "Ilham Keluarga 392",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 160,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 393,
+    "Nama_Lengkap": "Aisyah Keluarga 393",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 160,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 394,
+    "Nama_Lengkap": "Putri Keluarga 394",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 160,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 395,
+    "Nama_Lengkap": "Aisyah Keluarga 395",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 162,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 396,
+    "Nama_Lengkap": "Siti Keluarga 396",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 162,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 397,
+    "Nama_Lengkap": "Rian Keluarga 397",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 162,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 398,
+    "Nama_Lengkap": "Agus Keluarga 398",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 162,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 399,
+    "Nama_Lengkap": "Fitri Keluarga 399",
+    "Peran": "Keturunan",
+    "ID_Ayah": 163,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 400,
+    "Nama_Lengkap": "Rizal Keluarga 400",
+    "Peran": "Keturunan",
+    "ID_Ayah": 163,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 401,
+    "Nama_Lengkap": "Aisyah Keluarga 401",
+    "Peran": "Keturunan",
+    "ID_Ayah": 163,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 402,
+    "Nama_Lengkap": "Ilham Keluarga 402",
+    "Peran": "Keturunan",
+    "ID_Ayah": 163,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 403,
+    "Nama_Lengkap": "Ilham Keluarga 403",
+    "Peran": "Keturunan",
+    "ID_Ayah": 163,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 404,
+    "Nama_Lengkap": "Ayu Keluarga 404",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 168,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 405,
+    "Nama_Lengkap": "Rian Keluarga 405",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 168,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 406,
+    "Nama_Lengkap": "Ilham Keluarga 406",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 168,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 407,
+    "Nama_Lengkap": "Siti Keluarga 407",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 168,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 408,
+    "Nama_Lengkap": "Dewi Keluarga 408",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 168,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 409,
+    "Nama_Lengkap": "Rina Keluarga 409",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 170,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 410,
+    "Nama_Lengkap": "Budi Keluarga 410",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 170,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 411,
+    "Nama_Lengkap": "Nina Keluarga 411",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 170,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 412,
+    "Nama_Lengkap": "Yoga Keluarga 412",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 170,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 413,
+    "Nama_Lengkap": "Putri Keluarga 413",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 170,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 414,
+    "Nama_Lengkap": "Rizal Keluarga 414",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 172,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 415,
+    "Nama_Lengkap": "Rizal Keluarga 415",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 172,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 416,
+    "Nama_Lengkap": "Ilham Keluarga 416",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 172,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 417,
+    "Nama_Lengkap": "Ilham Keluarga 417",
+    "Peran": "Keturunan",
+    "ID_Ayah": 173,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 418,
+    "Nama_Lengkap": "Rina Keluarga 418",
+    "Peran": "Keturunan",
+    "ID_Ayah": 173,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 419,
+    "Nama_Lengkap": "Lina Keluarga 419",
+    "Peran": "Keturunan",
+    "ID_Ayah": 173,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 420,
+    "Nama_Lengkap": "Maya Keluarga 420",
+    "Peran": "Keturunan",
+    "ID_Ayah": 177,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 421,
+    "Nama_Lengkap": "Ilham Keluarga 421",
+    "Peran": "Keturunan",
+    "ID_Ayah": 177,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 422,
+    "Nama_Lengkap": "Nina Keluarga 422",
+    "Peran": "Keturunan",
+    "ID_Ayah": 177,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 423,
+    "Nama_Lengkap": "Rizal Keluarga 423",
+    "Peran": "Keturunan",
+    "ID_Ayah": 177,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 424,
+    "Nama_Lengkap": "Rina Keluarga 424",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 178,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 425,
+    "Nama_Lengkap": "Maya Keluarga 425",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 178,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 426,
+    "Nama_Lengkap": "Rian Keluarga 426",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 178,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 427,
+    "Nama_Lengkap": "Andi Keluarga 427",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 178,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 428,
+    "Nama_Lengkap": "Putri Keluarga 428",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 178,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 429,
+    "Nama_Lengkap": "Dimas Keluarga 429",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 180,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 430,
+    "Nama_Lengkap": "Agus Keluarga 430",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 180,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 431,
+    "Nama_Lengkap": "Dimas Keluarga 431",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 180,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 432,
+    "Nama_Lengkap": "Budi Keluarga 432",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 180,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 433,
+    "Nama_Lengkap": "Dewi Keluarga 433",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 180,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 434,
+    "Nama_Lengkap": "Lina Keluarga 434",
+    "Peran": "Keturunan",
+    "ID_Ayah": 181,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 435,
+    "Nama_Lengkap": "Rian Keluarga 435",
+    "Peran": "Keturunan",
+    "ID_Ayah": 181,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 436,
+    "Nama_Lengkap": "Nina Keluarga 436",
+    "Peran": "Keturunan",
+    "ID_Ayah": 181,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 437,
+    "Nama_Lengkap": "Putri Keluarga 437",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 182,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 438,
+    "Nama_Lengkap": "Nina Keluarga 438",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 182,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 439,
+    "Nama_Lengkap": "Aisyah Keluarga 439",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 182,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 440,
+    "Nama_Lengkap": "Yoga Keluarga 440",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 182,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 441,
+    "Nama_Lengkap": "Budi Keluarga 441",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 184,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 442,
+    "Nama_Lengkap": "Putri Keluarga 442",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 184,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 443,
+    "Nama_Lengkap": "Fitri Keluarga 443",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 184,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 444,
+    "Nama_Lengkap": "Dimas Keluarga 444",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 184,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 445,
+    "Nama_Lengkap": "Dimas Keluarga 445",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 184,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 446,
+    "Nama_Lengkap": "Dewi Keluarga 446",
+    "Peran": "Keturunan",
+    "ID_Ayah": 185,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 447,
+    "Nama_Lengkap": "Dewi Keluarga 447",
+    "Peran": "Keturunan",
+    "ID_Ayah": 185,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 448,
+    "Nama_Lengkap": "Dimas Keluarga 448",
+    "Peran": "Keturunan",
+    "ID_Ayah": 185,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 449,
+    "Nama_Lengkap": "Agus Keluarga 449",
+    "Peran": "Keturunan",
+    "ID_Ayah": 185,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 450,
+    "Nama_Lengkap": "Fitri Keluarga 450",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 186,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 451,
+    "Nama_Lengkap": "Adi Keluarga 451",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 186,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 452,
+    "Nama_Lengkap": "Yoga Keluarga 452",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 186,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 453,
+    "Nama_Lengkap": "Dimas Keluarga 453",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 186,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 454,
+    "Nama_Lengkap": "Nina Keluarga 454",
+    "Peran": "Keturunan",
+    "ID_Ayah": 187,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 455,
+    "Nama_Lengkap": "Lina Keluarga 455",
+    "Peran": "Keturunan",
+    "ID_Ayah": 187,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 456,
+    "Nama_Lengkap": "Rian Keluarga 456",
+    "Peran": "Keturunan",
+    "ID_Ayah": 187,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 457,
+    "Nama_Lengkap": "Agus Keluarga 457",
+    "Peran": "Keturunan",
+    "ID_Ayah": 187,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 458,
+    "Nama_Lengkap": "Dimas Keluarga 458",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 188,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 459,
+    "Nama_Lengkap": "Lina Keluarga 459",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 188,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 460,
+    "Nama_Lengkap": "Dewi Keluarga 460",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 188,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 461,
+    "Nama_Lengkap": "Siti Keluarga 461",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 188,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 462,
+    "Nama_Lengkap": "Agus Keluarga 462",
+    "Peran": "Keturunan",
+    "ID_Ayah": 189,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 463,
+    "Nama_Lengkap": "Fitri Keluarga 463",
+    "Peran": "Keturunan",
+    "ID_Ayah": 189,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 464,
+    "Nama_Lengkap": "Dimas Keluarga 464",
+    "Peran": "Keturunan",
+    "ID_Ayah": 189,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 465,
+    "Nama_Lengkap": "Ayu Keluarga 465",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 190,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 466,
+    "Nama_Lengkap": "Dewi Keluarga 466",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 190,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 467,
+    "Nama_Lengkap": "Rina Keluarga 467",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 190,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 468,
+    "Nama_Lengkap": "Adi Keluarga 468",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 190,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 469,
+    "Nama_Lengkap": "Rian Keluarga 469",
+    "Peran": "Keturunan",
+    "ID_Ayah": 193,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 470,
+    "Nama_Lengkap": "Aisyah Keluarga 470",
+    "Peran": "Keturunan",
+    "ID_Ayah": 193,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 471,
+    "Nama_Lengkap": "Budi Keluarga 471",
+    "Peran": "Keturunan",
+    "ID_Ayah": 193,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 472,
+    "Nama_Lengkap": "Budi Keluarga 472",
+    "Peran": "Keturunan",
+    "ID_Ayah": 197,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 473,
+    "Nama_Lengkap": "Dewi Keluarga 473",
+    "Peran": "Keturunan",
+    "ID_Ayah": 197,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 474,
+    "Nama_Lengkap": "Rian Keluarga 474",
+    "Peran": "Keturunan",
+    "ID_Ayah": 197,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 475,
+    "Nama_Lengkap": "Ilham Keluarga 475",
+    "Peran": "Keturunan",
+    "ID_Ayah": 197,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 476,
+    "Nama_Lengkap": "Fitri Keluarga 476",
+    "Peran": "Keturunan",
+    "ID_Ayah": 197,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 477,
+    "Nama_Lengkap": "Fitri Keluarga 477",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 198,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 478,
+    "Nama_Lengkap": "Dimas Keluarga 478",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 198,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 479,
+    "Nama_Lengkap": "Aisyah Keluarga 479",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 198,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 480,
+    "Nama_Lengkap": "Nina Keluarga 480",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 198,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 481,
+    "Nama_Lengkap": "Fitri Keluarga 481",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 198,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 482,
+    "Nama_Lengkap": "Dimas Keluarga 482",
+    "Peran": "Keturunan",
+    "ID_Ayah": 199,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 483,
+    "Nama_Lengkap": "Andi Keluarga 483",
+    "Peran": "Keturunan",
+    "ID_Ayah": 199,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 484,
+    "Nama_Lengkap": "Dimas Keluarga 484",
+    "Peran": "Keturunan",
+    "ID_Ayah": 199,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 485,
+    "Nama_Lengkap": "Rina Keluarga 485",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 200,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 486,
+    "Nama_Lengkap": "Yoga Keluarga 486",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 200,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 487,
+    "Nama_Lengkap": "Rina Keluarga 487",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 200,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 488,
+    "Nama_Lengkap": "Maya Keluarga 488",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 200,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 489,
+    "Nama_Lengkap": "Rina Keluarga 489",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 200,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 490,
+    "Nama_Lengkap": "Aisyah Keluarga 490",
+    "Peran": "Keturunan",
+    "ID_Ayah": 201,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 491,
+    "Nama_Lengkap": "Dimas Keluarga 491",
+    "Peran": "Keturunan",
+    "ID_Ayah": 201,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 492,
+    "Nama_Lengkap": "Budi Keluarga 492",
+    "Peran": "Keturunan",
+    "ID_Ayah": 201,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 493,
+    "Nama_Lengkap": "Adi Keluarga 493",
+    "Peran": "Keturunan",
+    "ID_Ayah": 203,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 494,
+    "Nama_Lengkap": "Ilham Keluarga 494",
+    "Peran": "Keturunan",
+    "ID_Ayah": 203,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 495,
+    "Nama_Lengkap": "Yoga Keluarga 495",
+    "Peran": "Keturunan",
+    "ID_Ayah": 203,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 496,
+    "Nama_Lengkap": "Ayu Keluarga 496",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 204,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 497,
+    "Nama_Lengkap": "Rina Keluarga 497",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 204,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 498,
+    "Nama_Lengkap": "Ayu Keluarga 498",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 204,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 499,
+    "Nama_Lengkap": "Siti Keluarga 499",
+    "Peran": "Keturunan",
+    "ID_Ayah": 207,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 500,
+    "Nama_Lengkap": "Fitri Keluarga 500",
+    "Peran": "Keturunan",
+    "ID_Ayah": 207,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 501,
+    "Nama_Lengkap": "Putri Keluarga 501",
+    "Peran": "Keturunan",
+    "ID_Ayah": 207,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 502,
+    "Nama_Lengkap": "Budi Keluarga 502",
+    "Peran": "Keturunan",
+    "ID_Ayah": 207,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 503,
+    "Nama_Lengkap": "Andi Keluarga 503",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 208,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 504,
+    "Nama_Lengkap": "Lina Keluarga 504",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 208,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 505,
+    "Nama_Lengkap": "Nina Keluarga 505",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 208,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 506,
+    "Nama_Lengkap": "Andi Keluarga 506",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 208,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 507,
+    "Nama_Lengkap": "Agus Keluarga 507",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 208,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 508,
+    "Nama_Lengkap": "Dimas Keluarga 508",
+    "Peran": "Keturunan",
+    "ID_Ayah": 209,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 509,
+    "Nama_Lengkap": "Maya Keluarga 509",
+    "Peran": "Keturunan",
+    "ID_Ayah": 209,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 510,
+    "Nama_Lengkap": "Siti Keluarga 510",
+    "Peran": "Keturunan",
+    "ID_Ayah": 209,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 511,
+    "Nama_Lengkap": "Nina Keluarga 511",
+    "Peran": "Keturunan",
+    "ID_Ayah": 209,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 512,
+    "Nama_Lengkap": "Fitri Keluarga 512",
+    "Peran": "Keturunan",
+    "ID_Ayah": 213,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 513,
+    "Nama_Lengkap": "Maya Keluarga 513",
+    "Peran": "Keturunan",
+    "ID_Ayah": 213,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 514,
+    "Nama_Lengkap": "Ilham Keluarga 514",
+    "Peran": "Keturunan",
+    "ID_Ayah": 213,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 515,
+    "Nama_Lengkap": "Adi Keluarga 515",
+    "Peran": "Keturunan",
+    "ID_Ayah": 213,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 516,
+    "Nama_Lengkap": "Dimas Keluarga 516",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 214,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 517,
+    "Nama_Lengkap": "Ilham Keluarga 517",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 214,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 518,
+    "Nama_Lengkap": "Adi Keluarga 518",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 214,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 519,
+    "Nama_Lengkap": "Budi Keluarga 519",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 214,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 520,
+    "Nama_Lengkap": "Putri Keluarga 520",
+    "Peran": "Keturunan",
+    "ID_Ayah": 215,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 521,
+    "Nama_Lengkap": "Siti Keluarga 521",
+    "Peran": "Keturunan",
+    "ID_Ayah": 215,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 522,
+    "Nama_Lengkap": "Ayu Keluarga 522",
+    "Peran": "Keturunan",
+    "ID_Ayah": 215,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Belum",
+    "Jenis_Kelamin": "Perempuan"
+  },
+  {
+    "ID": 523,
+    "Nama_Lengkap": "Rizal Keluarga 523",
+    "Peran": "Keturunan",
+    "ID_Ayah": 215,
+    "ID_Ibu": null,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  },
+  {
+    "ID": 524,
+    "Nama_Lengkap": "Yoga Keluarga 524",
+    "Peran": "Keturunan",
+    "ID_Ayah": null,
+    "ID_Ibu": 216,
+    "ID_Pasangan": null,
+    "Status_Nikah": "Menikah",
+    "Jenis_Kelamin": "Laki-laki"
+  }
+];

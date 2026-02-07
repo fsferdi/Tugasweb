@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+</head>
+<body>
+    <h2>Input Biodata</h2>
+    <form method="post">
+        <input type="text" name="nama" placeholder="Nama" required><br><br>
+        <input type="text" name="tempat" placeholder="Tempat Lahir" required><br><br>
+        <input type="date" name="tanggal" required><br><br>
+        <select name="jenis" required>
+            <option value="">Pilih Jenis Kelamin</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+        </select><br><br>
+        <p>Hobi</p><br>
+        <input type="checkbox" name="hobi" value="Membaca"> Membaca<br>
+        <input type="checkbox" name="hobi" value="Olahraga"> Olahraga<br>
+        <input type="checkbox" name="hobi" value="Gaming"> Gaming<br>
+        <input type="checkbox" name="hobi" value="Musik"> Musik<br><br>
+        <button type="submit">Simpan</button>
+    </form>
+    <hr>
+    <h2>Data Biodata</h2>
+    <ul>
+        {% for data in biodata %}
+            <li>
+                <strong>{{ data.nama }}</strong> -
+                {{ data.tempat }} -
+                {{ data.tanggal }} -
+                {{ data.jenis }} -
+                Hobi: {{ data.hobi - join(", ") }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

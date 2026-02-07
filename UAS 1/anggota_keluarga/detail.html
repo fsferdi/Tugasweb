@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Silsilah Keluarga</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; margin: 0; padding: 20px; color: #1c1e21; }
+        .container { max-width: 1000px; margin: auto; }
+        .header-nav { margin-bottom: 20px; }
+        .btn-back { text-decoration: none; color: #007bff; font-weight: bold; }
+        
+        .main-layout { display: grid; grid-template-columns: 300px 1fr; gap: 20px; }
+        
+        .card { background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 20px; margin-bottom: 20px; }
+        .profile-card { text-align: center; height: fit-content; }
+        .avatar { font-size: 70px; background: #f8f9fa; width: 120px; height: 120px; line-height: 120px; border-radius: 50%; margin: 0 auto 15px; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        
+        .relations-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .box h4 { margin: 0 0 12px 0; color: #4b4f56; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #e9ecef; padding-bottom: 5px; }
+        
+        .member-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #333; padding: 10px; background: #f8f9fa; border-radius: 8px; margin-bottom: 8px; transition: 0.2s; border: 1px solid #eee; }
+        .member-link:hover { background: #e7f3ff; border-color: #007bff; transform: translateY(-2px); }
+        .empty { color: #bcc0c4; font-size: 0.85rem; font-style: italic; padding: 10px; text-align: center; }
+        
+        @media (max-width: 768px) { .main-layout { grid-template-columns: 1fr; } .relations-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-nav">
+        <a href="index.html" class="btn-back">⬅ Kembali ke Daftar</a>
+    </div>
+
+    <div class="main-layout">
+        <div class="card profile-card">
+            <div id="avatar" class="avatar">👤</div>
+            <h2 id="dispNama" style="margin: 10px 0 5px;">-</h2>
+            <div id="dispPeran" style="color: #606770; font-weight: 500; margin-bottom: 15px;">-</div>
+            <hr style="border: 0; border-top: 1px solid #eee;">
+            <div style="text-align: left; font-size: 0.9rem; line-height: 1.8;">
+                <div><strong>ID:</strong> <span id="dispID">#0</span></div>
+                <div><strong>Status:</strong> <span id="dispStatus">-</span></div>
+                <div><strong>Gender:</strong> <span id="dispGender">-</span></div>
+            </div>
+        </div>
+
+        <div class="relations-container">
+            <div class="card">
+                <div class="relations-grid">
+                    <div class="box">
+                        <h4>💍 Pasangan</h4>
+                        <div id="listPasangan"></div>
+                    </div>
+                    <div class="box">
+                        <h4>👴 Orang Tua</h4>
+                        <div id="listOrangTua"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="relations-grid">
+                    <div class="box">
+                        <h4>👶 Anak-Anak</h4>
+                        <div id="listAnak"></div>
+                    </div>
+                    <div class="box">
+                        <h4>👦 Saudara Kandung</h4>
+                        <div id="listSaudara"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="box">
+                    <h4>🤝 Sepupu</h4>
+                    <div id="listSepupu" class="relations-grid" style="grid-template-columns: 1fr 1fr;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/data_keluarga.js"></script>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentId = parseInt(urlParams.get('id'));
+    const person = dataKeluarga.find(p => p.ID === currentId);
+
+    if (person) {
+        document.getElementById('dispNama').innerText = person.Nama_Lengkap;
+        document.getElementById('dispPeran').innerText = person.Peran;
+        document.getElementById('dispID').innerText = "#" + person.ID;
+        document.getElementById('dispStatus').innerText = person.Status_Nikah;
+        document.getElementById('dispGender').innerText = person.Jenis_Kelamin;
+        document.getElementById('avatar').innerText = person.Jenis_Kelamin === "Laki-laki" ? "👨" : "👩";
+
+        const pasangan = dataKeluarga.filter(p => p.ID === person.ID_Pasangan);
+        render("listPasangan", pasangan);
+
+        const orangTua = dataKeluarga.filter(p => p.ID === person.ID_Ayah || p.ID === person.ID_Ibu);
+        render("listOrangTua", orangTua);
+
+        const anak = dataKeluarga.filter(p => p.ID_Ayah === person.ID || p.ID_Ibu === person.ID);
+        render("listAnak", anak);
+
+        const saudara = dataKeluarga.filter(p => 
+            p.ID !== person.ID && 
+            ((p.ID_Ayah === person.ID_Ayah && person.ID_Ayah !== null) || 
+             (p.ID_Ibu === person.ID_Ibu && person.ID_Ibu !== null))
+        );
+        render("listSaudara", saudara);
+
+        const ayah = dataKeluarga.find(p => p.ID === person.ID_Ayah);
+        const ibu = dataKeluarga.find(p => p.ID === person.ID_Ibu);
+        const idKakekNenek = new Set();
+        
+        if (ayah) { if(ayah.ID_Ayah) idKakekNenek.add(ayah.ID_Ayah); if(ayah.ID_Ibu) idKakekNenek.add(ayah.ID_Ibu); }
+        if (ibu) { if(ibu.ID_Ayah) idKakekNenek.add(ibu.ID_Ayah); if(ibu.ID_Ibu) idKakekNenek.add(ibu.ID_Ibu); }
+
+        const pamanBibi = dataKeluarga.filter(p => 
+            (idKakekNenek.has(p.ID_Ayah) || idKakekNenek.has(p.ID_Ibu)) && 
+            p.ID !== person.ID_Ayah && p.ID !== person.ID_Ibu
+        );
+
+        const idPamanBibi = pamanBibi.map(pb => pb.ID);
+        const sepupu = dataKeluarga.filter(p => idPamanBibi.includes(p.ID_Ayah) || idPamanBibi.includes(p.ID_Ibu));
+        render("listSepupu", sepupu);
+
+    } else {
+        document.body.innerHTML = "<center><h1>Data tidak ditemukan</h1><a href='index.html'>Kembali</a></center>";
+    }
+
+    function render(elementId, list) {
+        const target = document.getElementById(elementId);
+        if (list.length === 0) {
+            target.innerHTML = '<div class="empty">Tidak ditemukan</div>';
+            return;
+        }
+        target.innerHTML = list.map(m => `
+            <a href="detail.html?id=${m.ID}" class="member-link">
+                <span>${m.Jenis_Kelamin === "Laki-laki" ? "👨" : "👩"}</span>
+                <div>
+                    <div style="font-weight:bold; font-size:0.85rem;">${m.Nama_Lengkap}</div>
+                    <div style="font-size:0.7rem; color:grey;">${m.Peran}</div>
+                </div>
+            </a>
+        `).join('');
+    }
+</script>
+</body>
+</html>

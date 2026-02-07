@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def lulus():
-	nama = ""
-	hasil = ""
+	nama = None
+	hasil = None
 	
 	if request.method == "POST":
 		nama = request.form["nama"]

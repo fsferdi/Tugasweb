@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def login():
-	msg = ""
+	msg = None
 	
 	if request.method == "POST":
 		if request.form["username"] == "admin" and request.form["password"] == "admin":
